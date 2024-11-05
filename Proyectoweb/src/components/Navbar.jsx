@@ -4,7 +4,7 @@ import { FaBus, FaMapMarkedAlt, FaInfoCircle } from "react-icons/fa";
 
 const NavbarComponent = () => {
   return (
-    <Navbar bg="primary" expand="lg" className="ps-5 pe-2">
+    <Navbar bg="primary" expand="lg" className="px-5">
       <Navbar.Brand href="#home" className="text-secondary">
         <FaBus /> Rutas503
       </Navbar.Brand>
