@@ -1,0 +1,16 @@
+// Personaliza el colores primarios
+$primary: #272b3b;
+$secondary:#eb5b38;
+// Cambia el color del texto cuando el navbar es claro
+$navbar-light-color: #FFFFFF;  
+
+// Cambiar el color del texto cuando el enlace está activo
+.nav-link.active {
+    color: $secondary !important;
+  }
+
+
+
+
+// 2. Importa Bootstrap SCSS
+@import "../node_modules/bootstrap/scss/bootstrap";
