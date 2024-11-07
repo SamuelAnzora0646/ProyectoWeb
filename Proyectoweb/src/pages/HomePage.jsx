@@ -6,22 +6,31 @@ const HomePage = () => {
   const [selectedRoutes, setSelectedRoutes] = useState([]);
 
   const handleRouteSelect = (route) => {
-    setSelectedRoutes(prevRoutes => [...prevRoutes, route]);
+    setSelectedRoutes((prevRoutes) => [...prevRoutes, route]);
   };
 
   return (
-    <div className="container my-4">
-      <div className="row">
-        <div className="col-md-4 mb-4">
-          <h5 className="mb-4">Lista de Rutas</h5>
-          <RouteList onRouteSelect={handleRouteSelect} />
-        </div>
-        <div className="col-md-8">
-          <h5 className="mb-3">Mapa de Rutas</h5>
-          <MapView selectedRoutes={selectedRoutes} />
-        </div>
+<div className="container my-4">
+  <div className="row h-100" style={{ height: 'calc(100vh - 100px)' }}>
+    {/* Lista de Rutas */}
+    <div className="col-md-5 d-flex flex-column h-100">
+      <h5 className="mb-4">Lista de Rutas</h5>
+      <div className="flex-grow-1 overflow-auto border">
+        <RouteList onRouteSelect={handleRouteSelect} />
       </div>
     </div>
+    
+    {/* Mapa de Rutas */}
+    <div className="col-md-7 d-flex flex-column h-100">
+      {/* Agregando margen inferior al título */}
+      <h5 className="mb-4">Mapa de Rutas</h5> 
+      <div className="flex-grow-1 border">
+        <MapView selectedRoutes={selectedRoutes} />
+      </div>
+    </div>
+  </div>
+</div>
+
   );
 };
 
