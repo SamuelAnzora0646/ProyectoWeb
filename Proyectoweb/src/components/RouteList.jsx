@@ -63,7 +63,7 @@ const RouteList = ({ onRouteSelect }) => {
     <div
       className="route-list p-2"
       style={{
-        maxHeight: "300px",
+        maxHeight: "500px",
         overflowY: "scroll",
         border: "1px solid #ddd",
         borderRadius: "5px",
