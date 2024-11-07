@@ -7,6 +7,8 @@ const RouteList = ({ onRouteSelect }) => {
   const [searchText, setSearchText] = useState("");
   const [filteredRoutes, setFilteredRoutes] = useState([]);
   const [selectedRoute, setSelectedRoute] = useState(null);
+  const [selectedDepartment, setSelectedDepartment] = useState(""); // Estado para departamento seleccionado
+  const [departments, setDepartments] = useState([]); // Estado para los departamentos disponibles
 
   useEffect(() => {
     axios
@@ -15,6 +17,12 @@ const RouteList = ({ onRouteSelect }) => {
         if (Array.isArray(response.data)) {
           setRoutes(response.data);
           setFilteredRoutes(response.data);
+
+          // Obtener lista de departamentos únicos
+          const uniqueDepartments = [
+            ...new Set(response.data.map(route => route.department)),
+          ];
+          setDepartments(uniqueDepartments);
         } else {
           console.error("La respuesta de la API no es un arreglo de rutas.");
         }
@@ -27,11 +35,26 @@ const RouteList = ({ onRouteSelect }) => {
   const handleSearchChange = (event) => {
     const text = event.target.value;
     setSearchText(text);
-    const filtered = routes.filter(
+    filterRoutes(text, selectedDepartment);
+  };
+
+  const handleDepartmentChange = (event) => {
+    const department = event.target.value;
+    setSelectedDepartment(department);
+    filterRoutes(searchText, department);
+  };
+
+  const filterRoutes = (search, department) => {
+    let filtered = routes.filter(
       (route) =>
-        route.route.toLowerCase().includes(text.toLowerCase()) ||
-        route.path.toLowerCase().includes(text.toLowerCase())
+        route.route.toLowerCase().includes(search.toLowerCase()) ||
+        route.path.toLowerCase().includes(search.toLowerCase())
     );
+
+    if (department) {
+      filtered = filtered.filter(route => route.department === department);
+    }
+
     setFilteredRoutes(filtered);
   };
 
@@ -43,6 +66,7 @@ const RouteList = ({ onRouteSelect }) => {
 
   return (
     <div className="route-list p-2 border rounded" style={{ maxHeight: "500px", overflowY: "auto" }}>
+      {/* Campo de búsqueda */}
       <div className="input-group mb-3">
         <span className="input-group-text">
           <FiSearch />
@@ -56,12 +80,30 @@ const RouteList = ({ onRouteSelect }) => {
         />
       </div>
 
+      {/* Filtro de departamentos usando Bootstrap */}
+      <div className="mb-3">
+        <label htmlFor="departmentSelect" className="form-label">
+          Filtrar por departamento
+        </label>
+        <select
+          id="departmentSelect"
+          className="form-select"
+          value={selectedDepartment}
+          onChange={handleDepartmentChange}
+        >
+          <option value="">Todos los departamentos</option>
+          {departments.map((department, index) => (
+            <option key={index} value={department}>
+              {department}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {/* Renderización de rutas filtradas */}
       {filteredRoutes.length > 0 ? (
         filteredRoutes.map((route, index) => (
-          <div
-            key={index}
-            className="d-flex align-items-center mb-3 p-2 border rounded"
-          >
+          <div key={index} className="d-flex align-items-center mb-3 p-2 border rounded">
             <input
               type="checkbox"
               checked={selectedRoute === route.route}
