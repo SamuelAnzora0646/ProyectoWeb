@@ -83,7 +83,7 @@ const RouteList = ({ onRouteSelect }) => {
       {/* Filtro de departamentos usando Bootstrap */}
       <div className="mb-3">
         <label htmlFor="departmentSelect" className="form-label">
-          Filtrar por departamento
+          Selecciona un departamento
         </label>
         <select
           id="departmentSelect"
