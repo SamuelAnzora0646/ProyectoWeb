@@ -65,9 +65,10 @@ const RouteList = ({ onRouteSelect }) => {
   };
 
   return (
-    <div className="route-list p-2 border rounded" style={{ maxHeight: "500px", overflowY: "auto" }}>
+    //le quite la clase border
+    <div className="route-list p-2  rounded" style={{ maxHeight: "500px", overflowY: "auto" }}>
       {/* Campo de búsqueda */}
-      <div className="input-group mb-3">
+      <div className="input-group mb-3 ">
         <span className="input-group-text">
           <FiSearch />
         </span>

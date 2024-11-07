@@ -15,7 +15,7 @@ const HomePage = () => {
     {/* Lista de Rutas */}
     <div className="col-md-5 d-flex flex-column h-100">
       <h5 className="mb-4">Lista de Rutas</h5>
-      <div className="flex-grow-1 overflow-auto border">
+      <div className="flex-grow-1 overflow-auto border p-2">
         <RouteList onRouteSelect={handleRouteSelect} />
       </div>
     </div>

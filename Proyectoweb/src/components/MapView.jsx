@@ -34,7 +34,7 @@ const MapView = ({ selectedRoutes }) => {
   }, [selectedRoutes]);
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid p-2" >
       <div id="map" className="w-100" style={{ height: '500px' }}></div>
     </div>
   );
