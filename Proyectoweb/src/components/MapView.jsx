@@ -1,40 +1,47 @@
 import React, { useEffect } from 'react';
 
-// Función para cargar el script de Google Maps si no está cargado
-const loadGoogleMapsScript = (callback) => {
-  if (typeof window.google === 'undefined') {
-    const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY`;
-    script.async = true;
-    script.defer = true;
-    script.onload = callback;
-    document.head.appendChild(script);
-  } else {
-    callback();
-  }
+// Función para inicializar el mapa
+const initMap = async (selectedRoutes) => {
+  // Importa la librería de Google Maps de forma asíncrona
+  const { Map, Marker } = await google.maps.importLibrary("maps");
+  const map = new Map(document.getElementById("map"), {
+    center: { lat: 13.69294, lng: -89.21819 },
+    zoom: 10,
+  });
+
+  // Añade un marcador por cada ruta seleccionada
+  selectedRoutes.forEach(route => {
+    new Marker({
+      position: route.coordinates,
+      map,
+      title: route.route,
+    });
+  });
 };
 
+// Componente principal que muestra el mapa
 const MapView = ({ selectedRoutes }) => {
   useEffect(() => {
-    loadGoogleMapsScript(() => {
-      const map = new window.google.maps.Map(document.getElementById("map"), {
-        center: { lat: 13.69294, lng: -89.21819 },
-        zoom: 10,
-      });
+    // Cargar el script de Google Maps y luego inicializar el mapa
+    const loadGoogleMapsScript = () => {
+      const script = document.createElement('script');
+      script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCTtaFnA5HVMQq97uIFbcwORfMeAf-clYM&libraries=maps`;
+      script.async = true;
+      script.onload = () => initMap(selectedRoutes); // Llama a `initMap` cuando el script está cargado
+      document.head.appendChild(script);
+    };
 
-      // Añadir marcadores para cada ruta seleccionada
-      selectedRoutes.forEach(route => {
-        new window.google.maps.Marker({
-          position: route.coordinates,
-          map,
-          title: route.route,
-        });
-      });
-    });
-  }, [selectedRoutes]);
+    // Verifica si `google` ya está cargado, de lo contrario carga el script
+    if (!window.google) {
+      loadGoogleMapsScript();
+    } else {
+      initMap(selectedRoutes);
+    }
+  }, [selectedRoutes]); // Ejecuta el efecto cada vez que `selectedRoutes` cambia
 
+  // Renderiza el contenedor del mapa
   return (
-    <div className="container-fluid p-2" >
+    <div className="container-fluid p-2">
       <div id="map" className="w-100" style={{ height: '500px' }}></div>
     </div>
   );
