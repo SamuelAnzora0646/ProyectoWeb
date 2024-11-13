@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
 
+const GMAPS = import.meta.env.VITE_MAPS_URL;
 // Función para inicializar el mapa
 const initMap = async (selectedRoutes) => {
   // Importa la librería de Google Maps de forma asíncrona
   const { Map, Marker } = await google.maps.importLibrary("maps");
   const map = new Map(document.getElementById("map"), {
     center: { lat: 13.69294, lng: -89.21819 },
-    zoom: 10,
+    zoom: 12,
   });
 
   // Añade un marcador por cada ruta seleccionada
@@ -25,7 +26,7 @@ const MapView = ({ selectedRoutes }) => {
     // Cargar el script de Google Maps y luego inicializar el mapa
     const loadGoogleMapsScript = () => {
       const script = document.createElement('script');
-      script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCTtaFnA5HVMQq97uIFbcwORfMeAf-clYM&libraries=maps`;
+      script.src = `${GMAPS}`;
       script.async = true;
       script.onload = () => initMap(selectedRoutes); // Llama a `initMap` cuando el script está cargado
       document.head.appendChild(script);
