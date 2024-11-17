@@ -65,7 +65,7 @@ const LoginPage = ({ onLogin }) => {
         <Col xs={12} md={6} lg={8} className="d-flex justify-content-center align-items-center my-3">
           <div className="text-center">
             <img 
-              src="https://via.placeholder.com/400x400"
+              src="../../public/LOGO RUTAS 503.jpg"
               alt="Imagen de bienvenida"
               className="img-fluid"
               style={{ maxWidth: '80%' }}
