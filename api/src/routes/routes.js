@@ -1,34 +1,36 @@
-// Importa el módulo de Express para crear un router
+// routes/router.js
+
+// Importa el módulo 'express' para usar su funcionalidad de enrutamiento
 const express = require('express');
 
-// Crea una nueva instancia de un router en Express
+// Crea una nueva instancia de un router de Express, que se encargará de gestionar las rutas
 const router = express.Router();
 
 // Importa el controlador que maneja las rutas de la API
-// Asegúrate de que la ruta sea correcta y apunte al archivo adecuado
+// Este archivo contiene la lógica de negocio para cada ruta (GET, POST, PUT, DELETE)
 const routeController = require('../controllers/routesController.js');
 
-// Definir la ruta para obtener todas las rutas
-// Esta ruta responderá a las solicitudes GET en '/api/routes'
-// y delegará la lógica de la respuesta al método getAllRoutes del controlador
+// --- Rutas de la API ---
+
+// Ruta para obtener todas las rutas registradas
+// Esta ruta responde a solicitudes GET en '/api/routes' y ejecuta la función 'getAllRoutes' del controlador
 router.get('/routes', routeController.getAllRoutes);
 
-// Definir la ruta para crear una nueva ruta
-// Esta ruta responderá a las solicitudes POST en '/api/routes'
-// y delegará la lógica de la creación al método createRoute del controlador
+// Ruta para crear una nueva ruta
+// Esta ruta responde a solicitudes POST en '/api/routes' y ejecuta la función 'createRoute' del controlador
 router.post('/routes', routeController.createRoute);
 
-// Definir la ruta para actualizar una ruta existente
-// Esta ruta responderá a las solicitudes PUT en '/api/routes/:id'
-// ':id' es un parámetro de ruta que se usará para identificar la ruta a actualizar
-// La lógica de la actualización se delegará al método updateRoute del controlador
+// Ruta para actualizar una ruta existente
+// Esta ruta responde a solicitudes PUT en '/api/routes/:id'.
+// El parámetro ':id' en la ruta es utilizado para identificar qué ruta se quiere actualizar.
+// La función 'updateRoute' del controlador se encargará de la actualización
 router.put('/routes/:id', routeController.updateRoute);
 
-// Definir la ruta para eliminar una ruta existente
-// Esta ruta responderá a las solicitudes DELETE en '/api/routes/:id'
-// ':id' es un parámetro de ruta que se usará para identificar la ruta a eliminar
-// La lógica de la eliminación se delegará al método deleteRoute del controlador
+// Ruta para eliminar una ruta existente
+// Esta ruta responde a solicitudes DELETE en '/api/routes/:id'.
+// El parámetro ':id' en la ruta es utilizado para identificar qué ruta se quiere eliminar.
+// La función 'deleteRoute' del controlador se encargará de la eliminación
 router.delete('/routes/:id', routeController.deleteRoute);
 
-// Exporta el router para que pueda ser utilizado en otros archivos, como en 'app.js' o 'server.js'
+// Exporta el router para que pueda ser utilizado en otros archivos (por ejemplo, en 'app.js' o 'server.js')
 module.exports = router;
