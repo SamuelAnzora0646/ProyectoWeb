@@ -1,41 +1,81 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
+import { Loader } from "@googlemaps/js-api-loader";
 
-// Función para cargar el script de Google Maps si no está cargado
-const loadGoogleMapsScript = (callback) => {
-  if (typeof window.google === 'undefined') {
-    const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY`;
-    script.async = true;
-    script.defer = true;
-    script.onload = callback;
-    document.head.appendChild(script);
-  } else {
-    callback();
-  }
-};
+// Datos de prueba: rutas predefinidas
+const testRoutes = [
+  {
+    name: "Ruta 1",
+    startPoint: { lat: 13.69294, lng: -89.21819 },
+    endPoint: { lat: 13.71000, lng: -89.24000 },
+    path: [
+      { lat: 13.69294, lng: -89.21819 },
+      { lat: 13.70000, lng: -89.22000 },
+      { lat: 13.71000, lng: -89.24000 },
+    ],
+  },
+  {
+    name: "Ruta 2",
+    startPoint: { lat: 13.70000, lng: -89.23000 },
+    endPoint: { lat: 13.70500, lng: -89.24000 },
+    path: [
+      { lat: 13.70000, lng: -89.23000 },
+      { lat: 13.70200, lng: -89.23500 },
+      { lat: 13.70500, lng: -89.24000 },
+    ],
+  },
+];
 
-const MapView = ({ selectedRoutes }) => {
+// Accede a la API Key desde las variables de entorno
+const GMAPS = import.meta.env.VITE_MAPS_API_KEY;
+
+const MapView = () => {
   useEffect(() => {
-    loadGoogleMapsScript(() => {
-      const map = new window.google.maps.Map(document.getElementById("map"), {
+    // Carga la API de Google Maps usando la API Key
+    const loader = new Loader({
+      apiKey: GMAPS,
+      version: "weekly",
+      libraries: ["places"],
+    });
+
+    loader.load().then(() => {
+      // Crea el mapa
+      const map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: 13.69294, lng: -89.21819 },
-        zoom: 10,
+        zoom: 12,
       });
 
-      // Añadir marcadores para cada ruta seleccionada
-      selectedRoutes.forEach(route => {
-        new window.google.maps.Marker({
-          position: route.coordinates,
+      // Añade las rutas de prueba al mapa
+      testRoutes.forEach((route) => {
+        // Marcador del punto de inicio
+        new google.maps.Marker({
+          position: route.startPoint,
           map,
-          title: route.route,
+          title: `Inicio: ${route.name}`,
+        });
+
+        // Marcador del punto final
+        new google.maps.Marker({
+          position: route.endPoint,
+          map,
+          title: `Final: ${route.name}`,
+        });
+
+        // Dibuja la ruta como Polyline
+        new google.maps.Polyline({
+          path: route.path,
+          geodesic: true,
+          strokeColor: "#FF0000",
+          strokeOpacity: 1.0,
+          strokeWeight: 4,
+          map,
         });
       });
     });
-  }, [selectedRoutes]);
+  }, []);
 
   return (
-    <div className="container-fluid p-2" >
-      <div id="map" className="w-100" style={{ height: '500px' }}></div>
+    <div className="container-fluid p-2">
+      <div id="map" className="w-100" style={{ height: "500px" }}></div>
     </div>
   );
 };

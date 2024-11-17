@@ -15,7 +15,7 @@ const app = express();
 // Se aplica a todas las solicitudes entrantes antes de procesarlas
 app.use(corsConfig);
 
-// El middleware `express.json()` permite que Express pueda interpretar cuerpos de solicitudes en formato JSON
+// El middleware express.json() permite que Express pueda interpretar cuerpos de solicitudes en formato JSON
 // Esto es útil para procesar datos enviados con el método POST, PUT o PATCH en el cuerpo de la solicitud
 app.use(express.json());
 
