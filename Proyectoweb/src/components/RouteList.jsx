@@ -47,8 +47,9 @@ const RouteList = ({ onRouteSelect }) => {
   const filterRoutes = (search, department) => {
     let filtered = routes.filter(
       (route) =>
-        route.route.toLowerCase().includes(search.toLowerCase()) ||
-        route.path.toLowerCase().includes(search.toLowerCase())
+        route.routeName.toLowerCase().includes(search.toLowerCase()) || // Usamos `routeName` en lugar de `route`
+        route.startTime.toLowerCase().includes(search.toLowerCase()) || // Se puede buscar por `startTime` y `endTime`
+        route.endTime.toLowerCase().includes(search.toLowerCase())
     );
 
     if (department) {
@@ -65,10 +66,9 @@ const RouteList = ({ onRouteSelect }) => {
   };
 
   return (
-    //le quite la clase border
-    <div className="route-list p-2  rounded" style={{ maxHeight: "500px", overflowY: "auto" }}>
+    <div className="route-list p-2 rounded" style={{ maxHeight: "500px", overflowY: "auto" }}>
       {/* Campo de búsqueda */}
-      <div className="input-group mb-3 ">
+      <div className="input-group mb-3">
         <span className="input-group-text">
           <FiSearch />
         </span>
@@ -107,16 +107,18 @@ const RouteList = ({ onRouteSelect }) => {
           <div key={index} className="d-flex align-items-center mb-3 p-2 border rounded">
             <input
               type="checkbox"
-              checked={selectedRoute === route.route}
-              onChange={() => handleCheckboxChange(route.route)}
+              checked={selectedRoute === route.routeNumber} // Cambié de `route.route` a `route.routeNumber`
+              onChange={() => handleCheckboxChange(route.routeNumber)} // Cambié de `route.route` a `route.routeNumber`
               className="me-2"
             />
             <div className="d-flex flex-column">
               <div className="mb-2">
-                <strong className="text-primary">{route.route}</strong>
+                <strong className="text-primary">{route.routeName}</strong> {/* Cambié de `route.route` a `route.routeName` */}
               </div>
-              <span className="text-muted mb-1">{route.path}</span>
-              <strong className="text-success">{route.department}</strong>
+              <span className="text-muted mb-1">
+                {route.startTime} - {route.endTime} {/* Mostramos `startTime` y `endTime` */}
+              </span>
+              <strong className="text-success">{route.department}</strong> {/* Mantuvimos `department` */}
             </div>
           </div>
         ))
