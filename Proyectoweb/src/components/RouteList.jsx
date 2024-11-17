@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { FiSearch } from "react-icons/fi"; // Icono de lupa desde React Icons
+import RouteItem from "./RouteItem"; // Importa el componente RouteItem
 
 const RouteList = ({ onRouteSelect }) => {
   const [routes, setRoutes] = useState([]);
@@ -35,25 +36,26 @@ const RouteList = ({ onRouteSelect }) => {
   const handleSearchChange = (event) => {
     const text = event.target.value;
     setSearchText(text);
-    filterRoutes(text, selectedDepartment);
+    filterRoutes(text.trim(), selectedDepartment); // Usamos `.trim()` para quitar los espacios extra
   };
 
   const handleDepartmentChange = (event) => {
     const department = event.target.value;
     setSelectedDepartment(department);
-    filterRoutes(searchText, department);
+    filterRoutes(searchText.trim(), department); // También se quitan los espacios al filtrar
   };
 
   const filterRoutes = (search, department) => {
     let filtered = routes.filter(
       (route) =>
-        route.routeName.toLowerCase().includes(search.toLowerCase()) || // Usamos `routeName` en lugar de `route`
-        route.startTime.toLowerCase().includes(search.toLowerCase()) || // Se puede buscar por `startTime` y `endTime`
-        route.endTime.toLowerCase().includes(search.toLowerCase())
+        route.routeName.toLowerCase().includes(search.toLowerCase()) || // Buscamos por nombre de la ruta
+        route.startTime.toLowerCase().includes(search.toLowerCase()) || // Buscamos por hora de inicio
+        route.endTime.toLowerCase().includes(search.toLowerCase()) || // Buscamos por hora de fin
+        route.routeNumber.toLowerCase().includes(search.toLowerCase()) // Buscamos por número de ruta
     );
 
     if (department) {
-      filtered = filtered.filter(route => route.department === department);
+      filtered = filtered.filter(route => route.department === department); // Filtramos por departamento si se selecciona
     }
 
     setFilteredRoutes(filtered);
@@ -104,23 +106,12 @@ const RouteList = ({ onRouteSelect }) => {
       {/* Renderización de rutas filtradas */}
       {filteredRoutes.length > 0 ? (
         filteredRoutes.map((route, index) => (
-          <div key={index} className="d-flex align-items-center mb-3 p-2 border rounded">
-            <input
-              type="checkbox"
-              checked={selectedRoute === route.routeNumber} // Cambié de `route.route` a `route.routeNumber`
-              onChange={() => handleCheckboxChange(route.routeNumber)} // Cambié de `route.route` a `route.routeNumber`
-              className="me-2"
-            />
-            <div className="d-flex flex-column">
-              <div className="mb-2">
-                <strong className="text-primary">{route.routeName}</strong> {/* Cambié de `route.route` a `route.routeName` */}
-              </div>
-              <span className="text-muted mb-1">
-                {route.startTime} - {route.endTime} {/* Mostramos `startTime` y `endTime` */}
-              </span>
-              <strong className="text-success">{route.department}</strong> {/* Mantuvimos `department` */}
-            </div>
-          </div>
+          <RouteItem
+            key={index}
+            route={route}
+            onSelect={handleCheckboxChange}
+            isSelected={selectedRoute === route.routeNumber}
+          />
         ))
       ) : (
         <p>No se encontraron rutas.</p>
