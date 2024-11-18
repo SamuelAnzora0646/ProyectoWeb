@@ -1,16 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Form, Button, Container, Row, Col, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../context/AuthContext'; // Asegúrate de que la ruta sea correcta
 
-const LoginPage = ({ onLogin }) => {
+const LoginPage = () => {
+  const { login } = useContext(AuthContext); // Usamos el login desde el contexto
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState(null); // Para manejar errores
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    onLogin(); // Llama a onLogin para actualizar el estado de login en App.js
-    navigate('/perfil'); // Redirige al perfil después de iniciar sesión
+
+    try {
+      await login(email, password); // Llamada al login desde el contexto
+      navigate('/perfil'); // Redirige al perfil después de iniciar sesión
+    } catch (err) {
+      setError("Correo o contraseña incorrectos. Inténtalo de nuevo."); // Manejo de error claro
+    }
   };
 
   const handleCreateAccount = () => {
@@ -20,8 +28,9 @@ const LoginPage = ({ onLogin }) => {
   return (
     <Container fluid className="d-flex justify-content-center align-items-center my-5 bg-light">
       <Row className="w-100">
-        <Col xs={12} md={6} lg={4} className="mx-auto">
-          <Card className="shadow-sm border-0">
+        {/* Columna para el formulario */}
+        <Col xs={12} md={6} lg={4} className="d-flex justify-content-center align-items-center my-3">
+          <Card className="shadow-sm border w-100">
             <Card.Body>
               <h2 className="text-center mb-4">Iniciar sesión</h2>
               <Form onSubmit={handleLogin}>
@@ -47,6 +56,8 @@ const LoginPage = ({ onLogin }) => {
                   />
                 </Form.Group>
 
+                {error && <div className="alert alert-danger mb-3">{error}</div>} {/* Mostrar errores */}
+
                 <Button variant="primary" type="submit" className="w-100 py-2 mb-3">
                   Iniciar sesión
                 </Button>
@@ -62,6 +73,8 @@ const LoginPage = ({ onLogin }) => {
             </Card.Body>
           </Card>
         </Col>
+
+        {/* Columna para la imagen */}
         <Col xs={12} md={6} lg={8} className="d-flex justify-content-center align-items-center my-3">
           <div className="text-center">
             <img 

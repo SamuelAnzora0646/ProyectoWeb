@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
 import { FaBus, FaMapMarkedAlt, FaInfoCircle } from 'react-icons/fa';
+import { AuthContext } from '../context/AuthContext'; // Importar el contexto
 
-const NavbarComponent = ({ isLoggedIn }) => {
+const NavbarComponent = () => {
+  const { user } = useContext(AuthContext); // Usar el contexto para obtener el estado de autenticación
+
   return (
     <Navbar bg="primary" expand="lg" className="px-5">
       <Navbar.Brand as={Link} to="/" className="text-secondary">
@@ -21,12 +24,14 @@ const NavbarComponent = ({ isLoggedIn }) => {
           <Link to="/contacto" className="nav-link">
             <FaInfoCircle /> Contacto
           </Link>
-          {isLoggedIn ? (
+          {user ? (
+            // Si el usuario está logueado, mostrar el enlace al perfil
             <Link to="/perfil" className="nav-link">
               Perfil
             </Link>
           ) : (
-            <Link to="/login" className="nav-link">Login</Link>
+            // Si el usuario no está logueado, mostrar el enlace de login
+            <Link to="/login" className="nav-link">Iniciar sesión</Link>
           )}
         </Nav>
       </Navbar.Collapse>
