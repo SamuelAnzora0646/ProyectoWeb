@@ -74,9 +74,7 @@ const MapView = () => {
   }, []);
 
   return (
-    <div className="container-fluid p-2">
-      <div id="map" className="w-100" style={{ height: "500px" }}></div>
-    </div>
+      <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1w52p3b-BY7d1gvAqBJ01MZAY3QkWUX4&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
   );
 };
 
