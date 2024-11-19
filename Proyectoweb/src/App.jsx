@@ -7,25 +7,26 @@ import LoginPage from './pages/LoginPage';
 import CreateAccountPage from './pages/CreateAccountPage';
 import ContactPage from './pages/ContactPage';
 import RutasPage from './pages/RutasPage';
-import RutaDetailPage from './pages/RutaDetailPage';
 import Footer from './components/Footer';
-import { AuthProvider } from './context/AuthContext'; // Asegúrate de importar el AuthProvider
+import { AuthProvider } from './context/AuthContext'; // Proveedor de autenticación
 
 const App = () => {
   return (
-    <AuthProvider> {/* Envolver la aplicación con AuthProvider */}
+    <AuthProvider> {/* Proporciona el contexto de autenticación a toda la aplicación */}
       <Router>
-        <Navbar /> {/* Navbar ahora usa el AuthContext directamente */}
+        <Navbar /> {/* Barra de navegación */}
         <Routes>
+          {/* Página principal */}
           <Route path="/" element={<HomePage />} />
+          
+          {/* Rutas adicionales */}
           <Route path="/perfil" element={<ProfilePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/crear-cuenta" element={<CreateAccountPage />} />
           <Route path="/contacto" element={<ContactPage />} />
           <Route path="/rutas" element={<RutasPage />} />
-          <Route path="/ruta/:id" element={<RutaDetailPage />} />
         </Routes>
-        <Footer />
+        <Footer /> {/* Pie de página */}
       </Router>
     </AuthProvider>
   );

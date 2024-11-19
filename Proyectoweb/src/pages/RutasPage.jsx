@@ -1,65 +1,35 @@
-// src/pages/RutasPage.js
 import React, { useState } from 'react';
-import { Container, Row, Col, Card, Button, ListGroup } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import RouteList from '../components/RouteList';
+import MapView from '../components/MapView';
 
-const RutasPage = () => {
-  // Lista de rutas de ejemplo (podrías obtener esto desde una API o base de datos)
-  const [rutas] = useState([
-    {
-      id: 1,
-      nombre: 'Ruta A',
-      descripcion: 'Desde el centro hasta el norte de la ciudad.',
-      horarios: ['08:00 AM', '12:00 PM', '04:00 PM'],
-      destino: 'Norte de la ciudad',
-    },
-    {
-      id: 2,
-      nombre: 'Ruta B',
-      descripcion: 'Desde el sur hasta el este de la ciudad.',
-      horarios: ['09:00 AM', '01:00 PM', '05:00 PM'],
-      destino: 'Este de la ciudad',
-    },
-    {
-      id: 3,
-      nombre: 'Ruta C',
-      descripcion: 'Ruta circular que conecta varias zonas.',
-      horarios: ['07:00 AM', '11:00 AM', '03:00 PM'],
-      destino: 'Variados',
-    },
-  ]);
+const RutasPage = () => { // Cambiado de HomePage a RutasPage
+  const [selectedRoutes, setSelectedRoutes] = useState([]);
+
+  const handleRouteSelect = (route) => {
+    setSelectedRoutes((prevRoutes) => [...prevRoutes, route]);
+  };
 
   return (
-    <Container className="mt-5">
-      <Row className="justify-content-center">
-        <Col xs={12} md={10}>
-          <h2 className="text-center mb-4">Rutas Disponibles</h2>
-          
-          {/* Muestra cada ruta en una tarjeta */}
-          {rutas.map((ruta) => (
-            <Card key={ruta.id} className="mb-4">
-              <Card.Body>
-                <Card.Title>{ruta.nombre}</Card.Title>
-                <Card.Text>{ruta.descripcion}</Card.Text>
-                <h5>Horarios:</h5>
-                <ListGroup variant="flush">
-                  {ruta.horarios.map((hora, index) => (
-                    <ListGroup.Item key={index}>{hora}</ListGroup.Item>
-                  ))}
-                </ListGroup>
-                <Card.Text>
-                  <strong>Destino:</strong> {ruta.destino}
-                </Card.Text>
-                <Link to={`/ruta/${ruta.id}`}>
-                  <Button variant="primary">Ver más detalles</Button>
-                </Link>
-              </Card.Body>
-            </Card>
-          ))}
-        </Col>
-      </Row>
-    </Container>
+    <div className="container my-4">
+      <div className="row h-100" style={{ height: 'calc(100vh - 100px)' }}>
+        {/* Lista de Rutas */}
+        <div className="col-md-5 d-flex flex-column h-100">
+          <h5 className="mb-4">Lista de Rutas</h5>
+          <div className="flex-grow-1 overflow-auto border p-2">
+            <RouteList onRouteSelect={handleRouteSelect} />
+          </div>
+        </div>
+
+        {/* Mapa de Rutas */}
+        <div className="col-md-7 d-flex flex-column h-100">
+          <h5 className="mb-4">Mapa de Rutas</h5>
+          <div className="flex-grow-1 border">
+            <MapView selectedRoutes={selectedRoutes} />
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default RutasPage;
+export default RutasPage; // Cambiado el nombre de exportación
