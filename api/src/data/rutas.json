@@ -1,0 +1,46 @@
+[
+  {
+    "id": "AB029GO",
+    "nombre": "29-G",
+    "hora_inicio": "4:40 AM",
+    "hora_fin": "8:00 PM",
+    "tarifa": 0.2,
+    "ida": [
+      "Parque San Bartolo",
+      "Ilopango",
+      "Bulevar del Ejército Nacional",
+      "Aeropuerto Internacional de Ilopango",
+      "Fuerza Aérea de El Salvador",
+      "Cárcel de Mujeres",
+      "Bulevar del Ejército",
+      "Unidad Médica ISSS Ilopango",
+      "Terminal Nuevo Amanecer",
+      "Rotonda El Progreso",
+      "Plaza Mundo Soyapango",
+      "Walmart Soyapango",
+      "Bulevar Venezuela",
+      "Mercado Tinetti",
+      "La Avenida",
+      "Mercado Ex Cuartel",
+      "Plaza Morazán",
+      "Universidad Tecnológica de El Salvador (UTEC)",
+      "Hospital Nacional Rosales",
+      "Universidad Andrés Bello",
+      "Metrosur",
+      "Bulevar de Los Héroes",
+      "Metrocentro"
+    ],
+    "regreso": [
+      "Instituto Salvadoreño del Seguro Social – Oficinas Administrativas",
+      "Universidad Salvadoreña Alberto Masferrer",
+      "3ª Calle Poniente",
+      "Colegio La Divina Providencia",
+      "Reloj de Flores",
+      "Mercado La Tiendona",
+      "Museo del Ferrocarril y Parque Temático",
+      "Plaza General Manuel José Arce",
+      "IDEM"
+    ],
+    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1t5oIbrPu8jkM1POQTDIzME2pARtT0i4&ehbc=2E312F' width='640' height='480'></iframe>"
+  }
+]
