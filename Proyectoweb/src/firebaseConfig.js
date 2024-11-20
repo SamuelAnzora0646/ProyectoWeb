@@ -1,6 +1,6 @@
 // Importar las funciones necesarias del SDK
 import { initializeApp } from "firebase/app";
-import { getAuth, updateProfile } from "firebase/auth";  // Actualización de perfil de usuario
+import { getAuth, updateProfile, GoogleAuthProvider } from "firebase/auth";  // Añadimos GoogleAuthProvider
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";  // Importa getStorage para Firebase Storage
 
@@ -21,6 +21,9 @@ const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);  // Instancia de autenticación
 export const db = getFirestore(app);  // Instancia de Firestore
 export const storage = getStorage(app);  // Instancia de Storage
+
+// Inicializa GoogleAuthProvider
+export const googleProvider = new GoogleAuthProvider();  // Esta es la instancia para Google Auth
 
 // Exporta la app principal (opcional, si no es necesaria puedes omitirla)
 export default app;

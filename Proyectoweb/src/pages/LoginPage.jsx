@@ -2,6 +2,8 @@ import React, { useState, useContext } from 'react';
 import { Form, Button, Container, Row, Col, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext'; // Asegúrate de que la ruta sea correcta
+import { signInWithPopup } from 'firebase/auth'; // Necesitamos esta función de Firebase
+import { auth, googleProvider } from '../firebaseConfig';  // Importa el googleProvider desde firebaseConfig
 
 const LoginPage = () => {
   const { login } = useContext(AuthContext); // Usamos el login desde el contexto
@@ -9,6 +11,22 @@ const LoginPage = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null); // Para manejar errores
   const navigate = useNavigate();
+
+  // Función para manejar el inicio de sesión con Google
+  const handleGoogleLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, googleProvider);
+      const user = result.user;
+
+      // Aquí se podría guardar el usuario en el contexto o realizar alguna otra acción
+      // Ejemplo: setUser(user);
+
+      navigate('/perfil'); // Redirige al perfil después de iniciar sesión
+    } catch (err) {
+      setError("Hubo un error al iniciar sesión con Google.");
+      console.error(err);
+    }
+  };
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -69,6 +87,15 @@ const LoginPage = () => {
                 className="w-100 text-center text-decoration-none"
               >
                 ¿No tienes una cuenta? Crear cuenta
+              </Button>
+
+              {/* Botón para iniciar sesión con Google */}
+              <Button
+                variant="outline-success"
+                onClick={handleGoogleLogin}
+                className="w-100 mt-3"
+              >
+                Iniciar sesión con Google
               </Button>
             </Card.Body>
           </Card>
