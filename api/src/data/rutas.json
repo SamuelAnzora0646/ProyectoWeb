@@ -41,14 +41,14 @@
       "Plaza General Manuel José Arce",
       "IDEM"
     ],
-    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1t5oIbrPu8jkM1POQTDIzME2pARtT0i4&ehbc=2E312F' width='640' height='480'></iframe>"
+    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1fF2nLmwV3KJZnoTYxPuQ2QIHfygrQ5k&ehbc=2E312F' width='640' height='480'></iframe>"
   },
   {
     "id": "AB029HO",
     "nombre": "29-H",
     "hora_inicio": "5:00 AM",
     "hora_fin": "7:40 PM",
-    "tarifa": 0.2,
+    "tarifa": 0.20,
     "ida": [
       "Urbanización Cimas de San Bartolo II",
       "Lotificación San Bartolo",
@@ -90,7 +90,7 @@
       "Plaza General Manuel José Arce",
       "IDEM"
     ],
-    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1o8bmEyzGloo3cWGbV3j_lOr2Q2CtKwo&ehbc=2E312F' width='640' height='480'></iframe>"
+    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=15jUmWZhRgMoGwha2Y03so7xYgeuCy8M&ehbc=2E312F' width='640' height='480'></iframe>"
   },
   {
     "id": "AB030BO",
@@ -134,6 +134,131 @@
       "Estadio Nacional Jorge Mágico Gonzalez",
       "Centro Comercial San Luis"
     ],
-    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=12XpzrUemBys2RVy0ExItUgVwFNBoB0o&ehbc=2E312F' width='640' height='480'></iframe>"
+    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1nRs61CS4_g-3ndVsp-LHRBzRoStm7eA&ehbc=2E312F' width='640' height='480'></iframe>"
+  },
+  {
+    "id": "AB030X1",
+    "nombre": "30-1",
+    "hora_inicio": "4:45AM",
+    "hora_fin": "9:00PM",
+    "tarifa": 0.20,
+    "ida": [
+      "Walmart Constitución",
+      "Bulevar Constitución",
+      "Calle Zacamil",
+      "Unicentro Metrópolis",
+      "Redondel Zacamil",
+      "Hospital Policlínico Zacamil del ISSS",
+      "Universidad de El Salvador UES",
+      "Redondel Torogoz",
+      "Hospital de Niños Benjamin Bloom",
+      "Bulevar de Los Héroes",
+      "Ministerio de Hacienda",
+      "Metrocentro San Salvador",
+      "Metrosur",
+      "Rotonda Plaza Mexico",
+      "Hospital Pro Familia",
+      "Hospital Central",
+      "Bulevar Tutunichapa",
+      "Centro Judicial Isidro Menéndez",
+      "Universidad Politécnica de El Salvador",
+      "Redondel José Martí",
+      "Parque Infantil de Diversiones"
+    ],
+    "regreso": [
+      "Mercado Ex Cuartel",
+      "Parque San José",
+      "Plaza Morazán",
+      "Universidad Tecnológica de El Salvador (UTEC)",
+      "Hospital Rosales",
+      "Universidad Dr. Andrés Bello",
+      "Condominios Medicentro La Esperanza",
+      "Colonia Ciudad Satélite"
+    ],
+    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=18vpXZ21LQTRJ69ep3FKip4vrB6xfxJw&ehbc=2E312F' width='640' height='480'></iframe>"
+  },
+  {
+    "id": "AB031XO",
+    "nombre": "31",
+    "hora_inicio": "5:00 AM",
+    "hora_fin": "7:00 PM",
+    "tarifa": 0.20,
+    "ida": [
+      "Santa Rita",
+      "Plaza Mundo Soyapango",
+      "Rotonda El Progreso",
+      "Bulevar del Ejército",
+      "Cementerio Municipal No. 2 Soyapango",
+      "Cementerio General de Soyapango",
+      "Walmart Soyapango",
+      "Hospital Amatepec del ISSS",
+      "Comunidad Ibérica",
+      "Fenadesal",
+      "Museo del Ferrocarril y Parque Temático",
+      "Mercado La Tiendona",
+      "Reloj de Flores",
+      "Redondel La Isla",
+      "Colonia Don Bosco",
+      "San Judas",
+      "Colonia Guadalupe",
+      "Colonia Isidro Menéndez",
+      "Bulevar Tutunichapa",
+      "Fuente Luminosa",
+      "Condominios Medicentro La Esperanza",
+      "Hospital de Niños Benjamín Bloom",
+      "Universidad de El Salvador",
+      "Alcaldía Municipal de Ayutuxtepeque"
+    ],
+    "regreso": [
+      "Cementerio Municipal de Mejicanos",
+      "Iglesia La Luz del Mundo",
+      "Parroquia María Auxiliadora",
+      "Redondel Don Rua",
+      "Universidad Politécnica de El Salvador",
+      "La Avenida"
+    ],
+    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1F3aM0d49Dnt58qRDqydswrJD20lFPMc&ehbc=2E312F' width='640' height='480'></iframe>"
+  },
+  {
+    "id": "AB031XE",
+    "nombre": "31XE",
+    "hora_inicio": "5:00 AM",
+    "hora_fin": "7:00 PM",
+    "tarifa": 0.35,
+    "ida": [
+      "Santa Rita",
+      "Plaza Mundo Soyapango",
+      "Rotonda El Progreso",
+      "Bulevar del Ejército",
+      "Cementerio Municipal No. 2 Soyapango",
+      "Cementerio General de Soyapango",
+      "Walmart Soyapango",
+      "Hospital Amatepec del ISSS",
+      "Comunidad Ibérica",
+      "Fenadesal",
+      "Museo del Ferrocarril y Parque Temático",
+      "Mercado La Tiendona",
+      "Reloj de Flores",
+      "Redondel La Isla",
+      "Colonia Don Bosco",
+      "San Judas",
+      "Colonia Guadalupe",
+      "Colonia Isidro Menéndez",
+      "Bulevar Tutunichapa",
+      "Fuente Luminosa",
+      "Condominios Medicentro La Esperanza",
+      "Hospital de Niños Benjamín Bloom",
+      "Universidad de El Salvador",
+      "Alcaldía Municipal de Ayutuxtepeque"
+    ],
+    "regreso": [
+      "Cementerio Municipal de Mejicanos",
+      "Iglesia La Luz del Mundo",
+      "Parroquia María Auxiliadora",
+      "Redondel Don Rua",
+      "Universidad Politécnica de El Salvador",
+      "La Avenida"
+    ],
+    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1hSPKf7mFk2gk1K4kvN0cYf85XnakAx8&ehbc=2E312F' width='640' height='480'></iframe>"
   }
 ]
