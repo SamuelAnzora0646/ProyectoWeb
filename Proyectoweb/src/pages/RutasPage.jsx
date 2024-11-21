@@ -1,4 +1,3 @@
-// RutasPage.js
 import React, { useState } from 'react';
 import RouteList from '../components/RouteList';
 import MapView from '../components/MapView';
@@ -22,9 +21,9 @@ const RutasPage = () => {
 
   return (
     <div className="container my-4">
-      <div className="row h-100" style={{ height: 'calc(100vh - 100px)' }}>
+      <div className="row" style={{ height: 'calc(100vh - 100px)' }}>
         {/* Lista de Rutas */}
-        <div className="col-md-5 d-flex flex-column h-100">
+        <div className="col-md-5 d-flex flex-column" style={{ height: '100%' }}>
           <h5 className="mb-4">Lista de Rutas</h5>
           <div className="flex-grow-1 overflow-auto border p-2">
             <RouteList
@@ -35,7 +34,7 @@ const RutasPage = () => {
         </div>
 
         {/* Mapa de Rutas */}
-        <div className="col-md-7 d-flex flex-column h-100">
+        <div className="col-md-7 d-flex flex-column" style={{ height: '100%' }}>
           <h5 className="mb-4">Mapa de Rutas</h5>
           <div className="flex-grow-1 border">
             <MapView mapUrl={selectedMapUrl} />  {/* Pasamos la URL del mapa a MapView */}

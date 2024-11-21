@@ -21,6 +21,7 @@ const MapView = ({ mapUrl }) => {
     <div
       id="map"
       className="d-flex flex-column w-100 h-100"
+      style={{ height: '100%' }}
     ></div>  // Contenedor donde se monta el iframe
   );
 };
