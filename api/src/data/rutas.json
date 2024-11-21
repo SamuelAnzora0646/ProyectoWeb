@@ -1,11 +1,12 @@
 [
   {
-    "id": "AB029GO",
-    "nombre": "29-G",
-    "hora_inicio": "4:40 AM",
-    "hora_fin": "8:00 PM",
-    "tarifa": 0.2,
-    "ida": [
+    "code": "AB029GO",
+    "routeNumber": "29-G",
+    "startTime": "4:40 AM",
+    "endTime": "8:00 PM",
+    "department": "san salvador",
+    "cost": 0.2,
+    "outbound": [
       "Parque San Bartolo",
       "Ilopango",
       "Bulevar del Ejército Nacional",
@@ -30,7 +31,7 @@
       "Bulevar de Los Héroes",
       "Metrocentro"
     ],
-    "regreso": [
+    "return": [
       "Instituto Salvadoreño del Seguro Social – Oficinas Administrativas",
       "Universidad Salvadoreña Alberto Masferrer",
       "3ª Calle Poniente",
@@ -41,15 +42,16 @@
       "Plaza General Manuel José Arce",
       "IDEM"
     ],
-    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1fF2nLmwV3KJZnoTYxPuQ2QIHfygrQ5k&ehbc=2E312F' width='640' height='480'></iframe>"
+    "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1fF2nLmwV3KJZnoTYxPuQ2QIHfygrQ5k&ehbc=2E312F' width='640' height='480'></iframe>"
   },
   {
-    "id": "AB029HO",
-    "nombre": "29-H",
-    "hora_inicio": "5:00 AM",
-    "hora_fin": "7:40 PM",
-    "tarifa": 0.2,
-    "ida": [
+    "code": "AB029HO",
+    "routeNumber": "29-H",
+    "startTime": "5:00 AM",
+    "endTime": "7:40 PM",
+    "department": "san salvador",
+    "cost": 0.2,
+    "outbound": [
       "Urbanización Cimas de San Bartolo II",
       "Lotificación San Bartolo",
       "Lotificación Bartolo del Norte",
@@ -79,7 +81,7 @@
       "Bulevar de Los Héroes",
       "Metrocentro"
     ],
-    "regreso": [
+    "return": [
       "Instituto Salvadoreño del Seguro Social – Oficinas Administrativas",
       "Universidad Salvadoreña Alberto Masferrer",
       "3ª Calle Poniente",
@@ -90,15 +92,16 @@
       "Plaza General Manuel José Arce",
       "IDEM"
     ],
-    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=15jUmWZhRgMoGwha2Y03so7xYgeuCy8M&ehbc=2E312F' width='640' height='480'></iframe>"
+    "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=15jUmWZhRgMoGwha2Y03so7xYgeuCy8M&ehbc=2E312F' width='640' height='480'></iframe>"
   },
   {
-    "id": "AB030BO",
-    "nombre": "30-B",
-    "hora_inicio": "4:50 AM",
-    "hora_fin": "8:30 PM",
-    "tarifa": 0.2,
-    "ida": [
+    "code": "AB030BO",
+    "routeNumber": "30-B",
+    "startTime": "4:50 AM",
+    "endTime": "8:30 PM",
+    "department": "san salvador",
+    "cost": 0.2,
+    "outbound": [
       "Ayutuxtepeque",
       "Parque Residencial Australia",
       "Unicentro Metrópolis",
@@ -123,7 +126,7 @@
       "Museo Nacional de Antropología Dr. David J. Guzmán (MUNA)",
       "Hospital Nacional El Salvador"
     ],
-    "regreso": [
+    "return": [
       "Alameda Manuel Enrique Araujo",
       "Comando de Doctrina y Educación Militar (CODEM)",
       "Mercado de Artesanías",
@@ -134,15 +137,16 @@
       "Estadio Nacional Jorge Mágico Gonzalez",
       "Centro Comercial San Luis"
     ],
-    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1nRs61CS4_g-3ndVsp-LHRBzRoStm7eA&ehbc=2E312F' width='640' height='480'></iframe>"
+    "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1nRs61CS4_g-3ndVsp-LHRBzRoStm7eA&ehbc=2E312F' width='640' height='480'></iframe>"
   },
   {
-    "id": "AB030X1",
-    "nombre": "30-1",
-    "hora_inicio": "4:45AM",
-    "hora_fin": "9:00PM",
-    "tarifa": 0.2,
-    "ida": [
+    "code": "AB030X1",
+    "routeNumber": "30-1",
+    "startTime": "4:45 AM",
+    "endTime": "9:00 PM",
+    "department": "san salvador",
+    "cost": 0.2,
+    "outbound": [
       "Walmart Constitución",
       "Bulevar Constitución",
       "Calle Zacamil",
@@ -165,7 +169,7 @@
       "Redondel José Martí",
       "Parque Infantil de Diversiones"
     ],
-    "regreso": [
+    "return": [
       "Mercado Ex Cuartel",
       "Parque San José",
       "Plaza Morazán",
@@ -175,15 +179,16 @@
       "Condominios Medicentro La Esperanza",
       "Colonia Ciudad Satélite"
     ],
-    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=18vpXZ21LQTRJ69ep3FKip4vrB6xfxJw&ehbc=2E312F' width='640' height='480'></iframe>"
+    "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=18vpXZ21LQTRJ69ep3FKip4vrB6xfxJw&ehbc=2E312F' width='640' height='480'></iframe>"
   },
   {
-    "id": "AB031XO",
-    "nombre": "31",
-    "hora_inicio": "5:00 AM",
-    "hora_fin": "7:00 PM",
-    "tarifa": 0.2,
-    "ida": [
+    "code": "AB031XO",
+    "routeNumber": "31",
+    "startTime": "5:00 AM",
+    "endTime": "7:00 PM",
+    "department": "san salvador",
+    "cost": 0.2,
+    "outbound": [
       "Santa Rita",
       "Plaza Mundo Soyapango",
       "Rotonda El Progreso",
@@ -209,23 +214,25 @@
       "Universidad de El Salvador",
       "Alcaldía Municipal de Ayutuxtepeque"
     ],
-    "regreso": [
+    "return": [
       "Cementerio Municipal de Mejicanos",
       "Iglesia La Luz del Mundo",
       "Parroquia María Auxiliadora",
-      "Redondel Don Rua",
-      "Universidad Politécnica de El Salvador",
-      "La Avenida"
+      "Instituto Técnico Industrial",
+      "Avenida Delicias",
+      "Central 3",
+      "Plaza El Trébol"
     ],
-    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1F3aM0d49Dnt58qRDqydswrJD20lFPMc&ehbc=2E312F' width='640' height='480'></iframe>"
+    "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1oFMVn02A5IZhtI4_yZZSCTbBsz8n4lg&ehbc=2E312F' width='640' height='480'></iframe>"
   },
   {
-    "id": "AB031XE",
-    "nombre": "31XE",
-    "hora_inicio": "5:00 AM",
-    "hora_fin": "7:00 PM",
-    "tarifa": 0.35,
-    "ida": [
+    "code": "AB031XE",
+    "routeNumber": "31XE",
+    "startTime": "5:00 AM",
+    "endTime": "7:00 PM",
+    "department": "san salvador",
+    "cost": 0.35,
+    "outbound": [
       "Santa Rita",
       "Plaza Mundo Soyapango",
       "Rotonda El Progreso",
@@ -251,7 +258,7 @@
       "Universidad de El Salvador",
       "Alcaldía Municipal de Ayutuxtepeque"
     ],
-    "regreso": [
+    "return": [
       "Cementerio Municipal de Mejicanos",
       "Iglesia La Luz del Mundo",
       "Parroquia María Auxiliadora",
@@ -259,15 +266,16 @@
       "Universidad Politécnica de El Salvador",
       "La Avenida"
     ],
-    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1hSPKf7mFk2gk1K4kvN0cYf85XnakAx8&ehbc=2E312F' width='640' height='480'></iframe>"
+    "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1hSPKf7mFk2gk1K4kvN0cYf85XnakAx8&ehbc=2E312F' width='640' height='480'></iframe>"
   },
   {
-    "id": "AB034BO",
-    "nombre": "34-B",
-    "hora_inicio": "4:40AM",
-    "hora_fin": "7:00PM",
-    "tarifa": 0.2,
-    "ida": [
+    "code": "AB034BO",
+    "routeNumber": "34-B",
+    "startTime": "4:40 AM",
+    "endTime": "7:00 PM",
+    "department": "san salvador",
+    "cost": 0.2,
+    "outbound": [
       "Parque Residencial Lourdes",
       "Mercado Ex Cuartel",
       "Parque San José",
@@ -292,16 +300,17 @@
       "Rotonda El Soldado",
       "Plaza Luis Poma"
     ],
-    "regreso": ["Parque Cuscatlán", "IDEM"],
-    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1A53kxMjhP3QsgA1QytwCHZgYHEBRFEA&ehbc=2E312F' width='640' height='480'></iframe>"
+    "return": ["Parque Cuscatlán", "IDEM"],
+    "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1A53kxMjhP3QsgA1QytwCHZgYHEBRFEA&ehbc=2E312F' width='640' height='480'></iframe>"
   },
   {
-    "id": "AB037BOSS",
-    "nombre": "37-B",
-    "hora_inicio": "6:00 AM",
-    "hora_fin": "7:40 PM",
-    "tarifa": 0.36,
-    "ida": [
+    "code": "AB037BOSS",
+    "routeNumber": "37-B",
+    "startTime": "6:00 AM",
+    "endTime": "7:40 PM",
+    "department": "san salvador",
+    "cost": 0.36,
+    "outbound": [
       "Colonia Morán",
       "San Marcos",
       "Colonia San Antonio 4",
@@ -314,16 +323,17 @@
       "Barrio Candelaria",
       "Barrio El Calvario"
     ],
-    "regreso": null,
-    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=11n6n9KRr8-kiXX9X8hNKgCAPFSyd1Go&ehbc=2E312F' width='640' height='480'></iframe>"
+    "return": null,
+    "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=11n6n9KRr8-kiXX9X8hNKgCAPFSyd1Go&ehbc=2E312F' width='640' height='480'></iframe>"
   },
   {
-    "id": "AB037AOSS",
-    "nombre": "37-A",
-    "hora_inicio": "6 AM",
-    "hora_fin": "7:40 PM",
-    "tarifa": 0.36,
-    "ida": [
+    "code": "AB037AOSS",
+    "routeNumber": "37-A",
+    "startTime": "6:00 AM",
+    "endTime": "7:40 PM",
+    "department": "san salvador",
+    "cost": 0.36,
+    "outbound": [
       "Colonia Morán",
       "San Marcos",
       "Colonia San Antonio 4",
@@ -333,16 +343,17 @@
       "Barrio Candelaria",
       "Barrio El Calvario"
     ],
-    "regreso": ["Centro de Historia Militar"],
-    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1I4Usb8PI1YdjPsHwVXZwRWfgqrUnirY&ehbc=2E312F' width='640' height='480'></iframe>"
+    "return": ["Centro de Historia Militar"],
+    "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1I4Usb8PI1YdjPsHwVXZwRWfgqrUnirY&ehbc=2E312F' width='640' height='480'></iframe>"
   },
   {
-    "id": "AB037A1SS",
-    "nombre": "37-A 1",
-    "hora_inicio": "6:00 AM",
-    "hora_fin": "7:40 PM",
-    "tarifa": 0.34,
-    "ida": [
+    "code": "AB037A1SS",
+    "routeNumber": "37-A 1",
+    "startTime": "6:00 AM",
+    "endTime": "7:40 PM",
+    "department": "san salvador",
+    "cost": 0.34,
+    "outbound": [
       "Cantón Las Casitas",
       "Colonia Morán",
       "San Marcos",
@@ -353,16 +364,17 @@
       "Barrio Candelaria",
       "Barrio El Calvario"
     ],
-    "regreso": ["Centro de Historia Militar"],
-    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1mv5iSHOCNpJ2Lkan0DboGfTIlOK0RrE&ehbc=2E312F' width='640' height='480'></iframe>"
+    "return": ["Centro de Historia Militar"],
+    "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1mv5iSHOCNpJ2Lkan0DboGfTIlOK0RrE&ehbc=2E312F' width='640' height='480'></iframe>"
   },
   {
-    "id": "AB038AO",
-    "nombre": "38-A",
-    "hora_inicio": "4:00 AM",
-    "hora_fin": "7:15 PM",
-    "tarifa": 0.29,
-    "ida": [
+    "code": "AB038AO",
+    "routeNumber": "38-A",
+    "startTime": "4:00 AM",
+    "endTime": "7:15 PM",
+    "department": "san salvador",
+    "cost": 0.29,
+    "outbound": [
       "Urbanización Distrito Italia Sector 2",
       "Urbanización Distrito Italia",
       "Comunidad Los Indígenas",
@@ -387,16 +399,17 @@
       "Parque Centenario",
       "Mercado Ex Cuartel"
     ],
-    "regreso": null,
-    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1ibB9obV5QQmhdPE_3J8X7dxOROth7lM&ehbc=2E312F' width='640' height='480'></iframe>"
+    "return": null,
+    "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1ibB9obV5QQmhdPE_3J8X7dxOROth7lM&ehbc=2E312F' width='640' height='480'></iframe>"
   },
   {
-    "id": "AB038BO",
-    "nombre": "38-B",
-    "hora_inicio": "5 AM",
-    "hora_fin": "8 PM",
-    "tarifa": 0.29,
-    "ida": [
+    "code": "AB038BO",
+    "routeNumber": "38-B",
+    "startTime": "5:00 AM",
+    "endTime": "8:00 PM",
+    "department": "san salvador",
+    "cost": 0.29,
+    "outbound": [
       "Urbanización Valle del Sol San Leonardo",
       "Urbanización San Andrés",
       "Urbanización Nueva Apopa",
@@ -421,16 +434,17 @@
       "Parque Centenario",
       "Mercado Ex Cuartel"
     ],
-    "regreso": null,
-    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1ggS1SnftKSu6PikQwx35n0MXae-yw2I&ehbc=2E312F' width='640' height='480'></iframe>"
+    "return": null,
+    "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1ggS1SnftKSu6PikQwx35n0MXae-yw2I&ehbc=2E312F' width='640' height='480'></iframe>"
   },
   {
-    "id": "AB038CO",
-    "nombre": "38-C",
-    "hora_inicio": "4 AM",
-    "hora_fin": "8 PM",
-    "tarifa": 0.29,
-    "ida": [
+    "code": "AB038CO",
+    "routeNumber": "38-C",
+    "startTime": "4:00 AM",
+    "endTime": "8:00 PM",
+    "department": "san salvador",
+    "cost": 0.29,
+    "outbound": [
       "Urbanización Popotlán 2",
       "Parcelación Praderas 2",
       "Troncal del Norte",
@@ -454,16 +468,17 @@
       "INDES",
       "Parque Centenario"
     ],
-    "regreso": null,
-    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1Xyl0ZryuWHcvzxo21AvyTknsMLZHLMY&ehbc=2E312F' width='640' height='480'></iframe>"
+    "return": null,
+    "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1Xyl0ZryuWHcvzxo21AvyTknsMLZHLMY&ehbc=2E312F' width='640' height='480'></iframe>"
   },
   {
-    "id": "AB044X1",
-    "nombre": "44",
-    "hora_inicio": "5 AM",
-    "hora_fin": "7 PM",
-    "tarifa": 0.20,
-    "ida": [
+    "code": "AB044X1",
+    "routeNumber": "44",
+    "startTime": "5:00 AM",
+    "endTime": "7:00 PM",
+    "department": "san salvador",
+    "cost": 0.2,
+    "outbound": [
       "Redondel Zacamil",
       "Hospital Policlínico Zacamil del ISSS",
       "Universidad de El Salvador UES",
@@ -484,20 +499,21 @@
       "Parque Central de Antiguo Cuscatlán",
       "Calle Antiguo Cuscatlán"
     ],
-    "regreso": [
+    "return": [
       "La Ceiba de Guadalupe",
       "Estadio Cuscatlán",
       "Condominios Medicentro La Esperanza"
     ],
-    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1nud7pS-xVnbaL8lK8pGNYjAAOYzeDl0&ehbc=2E312F&noprof=1' width='640' height='480'></iframe>"
+    "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1nud7pS-xVnbaL8lK8pGNYjAAOYzeDl0&ehbc=2E312F&noprof=1' width='640' height='480'></iframe>"
   },
   {
-    "id": "AB044X2",
-    "nombre": "44 microbus",
-    "hora_inicio": "5 AM",
-    "hora_fin": "7 PM",
-    "tarifa": 0.25,
-    "ida": [
+    "code": "AB044X2",
+    "routeNumber": "44 microbus",
+    "startTime": "5:00 AM",
+    "endTime": "7:00 PM",
+    "department": "san salvador",
+    "cost": 0.25,
+    "outbound": [
       "Redondel Santísima Trinidad",
       "Ayutuxtepeque",
       "Hospital Policlínico Zacamil del ISSS",
@@ -534,20 +550,21 @@
       "Rotonda El Soldado",
       "Plaza Luis Poma"
     ],
-    "regreso": [
+    "return": [
       "La Ceiba de Guadalupe",
       "Estadio Cuscatlán",
       "Condominios Medicentro La Esperanza"
     ],
-    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1vH91nuaXK2lIHTCEyUDusEMHFjvxGaw&ehbc=2E312F' width='640' height='480'></iframe>"
+    "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1vH91nuaXK2lIHTCEyUDusEMHFjvxGaw&ehbc=2E312F' width='640' height='480'></iframe>"
   },
   {
-    "id": "AB101A1",
-    "nombre": "101-A",
-    "hora_inicio": "5:00 AM",
-    "hora_fin": "8:00 PM",
-    "tarifa": 0.20,
-    "ida": [
+    "code": "AB101A1",
+    "routeNumber": "101-A",
+    "startTime": "5:00 AM",
+    "endTime": "8:00 PM",
+    "department": "san salvador",
+    "cost": 0.2,
+    "outbound": [
       "Estadio Nacional Las Delicias",
       "Condominio Los Girasoles",
       "Carretera Panamericana",
@@ -570,7 +587,7 @@
       "Parque Simón Bolívar",
       "Centro Cívico Cultural Legislativo"
     ],
-    "regreso": [
+    "return": [
       "Ministerio de Salud de El Salvador",
       "Museo Universitario de Antropología",
       "Multiplaza",
@@ -579,15 +596,16 @@
       "Parque San Martín",
       "Parque Daniel Hernández"
     ],
-    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1YrHJRZJPkGGfR5Rc-JQ6v4LlOBAlPCA&ehbc=2E312F' width='640' height='480'></iframe>"
+    "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1YrHJRZJPkGGfR5Rc-JQ6v4LlOBAlPCA&ehbc=2E312F' width='640' height='480'></iframe>"
   },
   {
-    "id": "AB101A2",
-    "nombre": "101-A vía Shell",
-    "hora_inicio": "5 AM",
-    "hora_fin": "8 PM",
-    "tarifa": 0.20,
-    "ida": [
+    "code": "AB101A2",
+    "routeNumber": "101-A vía Shell",
+    "startTime": "5 AM",
+    "endTime": "8 PM",
+    "department": "san salvador",
+    "cost": 0.2,
+    "outbound": [
       "Estadio Nacional Las Delicias",
       "Condominio Los Girasoles",
       "Carretera Panamericana",
@@ -615,7 +633,7 @@
       "Universidad Politécnica de El Salvador",
       "Redondel José Martí"
     ],
-    "regreso": [
+    "return": [
       "Instituto Salvadoreño de Pensiones",
       "Hospital Pro Familia",
       "Rotonda Plaza México",
@@ -625,15 +643,16 @@
       "Parque San Martín",
       "Parque Daniel Hernández"
     ],
-    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1h9d61G0oGFRbUZWQLMqiD42nNBvd7OI&ehbc=2E312F' width='640' height='480'></iframe>"
+    "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1h9d61G0oGFRbUZWQLMqiD42nNBvd7OI&ehbc=2E312F' width='640' height='480'></iframe>"
   },
   {
-    "id": "AB101B2",
-    "nombre": "101-B MB",
-    "hora_inicio": "5 AM",
-    "hora_fin": "8 PM",
-    "tarifa": 0.31,
-    "ida": [
+    "code": "AB101B2",
+    "routeNumber": "101-B MB",
+    "startTime": "5 AM",
+    "endTime": "8 PM",
+    "department": "san salvador",
+    "cost": 0.31,
+    "outbound": [
       "Parque Las Araucarias",
       "Colonia Quezaltepeque",
       "Centro Interactivo para el Aprendizaje de Ciencias – sede La Libertad",
@@ -659,21 +678,22 @@
       "Parque Cuscatlán",
       "Hospital Nacional Rosales"
     ],
-    "regreso": [
+    "return": [
       "Multiplaza",
       "Centro Comercial Las Cascadas",
       "La Gran Vía",
       "Parque San Martín"
     ],
-    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1nfy3kiDwLRqw4dNx3VSDrwCh80cSwMk&ehbc=2E312F' width='640' height='480'></iframe>"
+    "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1nfy3kiDwLRqw4dNx3VSDrwCh80cSwMk&ehbc=2E312F' width='640' height='480'></iframe>"
   },
   {
-    "id": "AB042BO",
-    "nombre": "42-B",
-    "hora_inicio": "5:10 AM",
-    "hora_fin": "7:30 PM",
-    "tarifa": 0.31,
-    "ida": [
+    "code": "AB042BO",
+    "routeNumber": "42-B",
+    "startTime": "5:10 AM",
+    "endTime": "7:30 PM",
+    "department": "san salvador",
+    "cost": 0.31,
+    "outbound": [
       "Residencial San Antonio",
       "Parque Ecológico San José",
       "Ministerio de Agricultura y Ganadería",
@@ -700,22 +720,23 @@
       "Museo Universitario de Antropología",
       "Centro Cívico Cultural Legislativo"
     ],
-    "regreso": [
+    "return": [
       "Mercado Ex Cuartel",
       "Plaza Morazán",
       "Parque Simón Bolívar",
       "Urbanización Jardines de Cuscatlán",
       "Redondel El Platillo"
     ],
-    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1WYvlsP32HWAi_ocxtWq3tJ4SEi0VE7I&ehbc=2E312F' width='640' height='480'></iframe>"
+    "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1WYvlsP32HWAi_ocxtWq3tJ4SEi0VE7I&ehbc=2E312F' width='640' height='480'></iframe>"
   },
   {
-    "id": "AB101DO",
-    "nombre": "101-D",
-    "hora_inicio": "4:15 AM",
-    "hora_fin": "9:00 PM",
-    "tarifa": 0.20,
-    "ida": [
+    "code": "AB101DO",
+    "routeNumber": "101-D",
+    "startTime": "4:15 AM",
+    "endTime": "9:00 PM",
+    "department": "san salvador",
+    "cost": 0.2,
+    "outbound": [
       "Residencial San Antonio",
       "Parque Ecológico San José",
       "Parque Adela Van Severen De Contreras",
@@ -751,11 +772,7 @@
       "Mercado San Miguelito",
       "Avenida España"
     ],
-    "regreso": [
-      "Calle Los Sisimiles",
-      "Plaza La Biblia",
-      "Redondel Masferrer"
-    ],
-    "mapa": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1jM7S9ERQ2EeYho5qQVhwkkN0wZ5B9oc&ehbc=2E312F' width='640' height='480'></iframe>"
-  }  
+    "return": ["Calle Los Sisimiles", "Plaza La Biblia", "Redondel Masferrer"],
+    "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1Vp3XbKtptpGsquBqTVVws5Jd5YFcDJw&ehbc=2E312F' width='640' height='480'></iframe>"
+  }
 ]
