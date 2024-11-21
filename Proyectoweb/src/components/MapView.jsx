@@ -74,7 +74,7 @@ const MapView = () => {
   }, []);
 
   return (
-    <iframe src='https://www.google.com/maps/d/u/0/embed?mid=1ibB9obV5QQmhdPE_3J8X7dxOROth7lM&ehbc=2E312F' width='640' height='480'></iframe>
+    <iframe src='https://www.google.com/maps/d/u/0/embed?mid=1nud7pS-xVnbaL8lK8pGNYjAAOYzeDl0&ehbc=2E312F&noprof=1' width='640' height='480'></iframe>
   );
 };
 
