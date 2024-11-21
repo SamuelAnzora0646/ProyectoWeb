@@ -2,9 +2,15 @@ import React, { useState } from "react";
 
 const RouteItem = ({ route, onSelect, isSelected }) => {
   const [showStops, setShowStops] = useState(false); // Para controlar la visibilidad de las paradas
+  const [mapUrl, setMapUrl] = useState(""); // Almacenamos la URL del iframe para cargarla más tarde
 
   const toggleStops = () => {
     setShowStops(prevState => !prevState); // Alternar la visibilidad de las paradas
+  };
+
+  const handleSelectRoute = () => {
+    onSelect(route.routeNumber);
+    setMapUrl(route.map); // Guardamos la URL del iframe para su posterior uso
   };
 
   return (
@@ -16,7 +22,7 @@ const RouteItem = ({ route, onSelect, isSelected }) => {
       <input
         type="checkbox"
         checked={isSelected}
-        onChange={() => onSelect(route.routeNumber)}
+        onChange={handleSelectRoute}
         className="me-2"
       />
 
@@ -65,6 +71,19 @@ const RouteItem = ({ route, onSelect, isSelected }) => {
                 ))}
               </ul>
             </div>
+          </div>
+        )}
+
+        {/* El iframe está disponible para su posterior uso, pero no es visible */}
+        {mapUrl && (
+          <div className="map-container" style={{ display: 'none' }}>
+            <iframe
+              src={mapUrl}
+              width="640"
+              height="480"
+              style={{ border: "none" }}
+              title={`Mapa de la Ruta ${route.routeNumber}`}
+            ></iframe>
           </div>
         )}
       </div>
