@@ -1,83 +1,20 @@
+// MapView.js
 import React, { useEffect } from "react";
-import { Loader } from "@googlemaps/js-api-loader";
 
-// Datos de prueba: rutas predefinidas
-const testRoutes = [
-  {
-    name: "Ruta 1",
-    startPoint: { lat: 13.69294, lng: -89.21819 },
-    endPoint: { lat: 13.71000, lng: -89.24000 },
-    path: [
-      { lat: 13.69294, lng: -89.21819 },
-      { lat: 13.70000, lng: -89.22000 },
-      { lat: 13.71000, lng: -89.24000 },
-    ],
-  },
-  {
-    name: "Ruta 2",
-    startPoint: { lat: 13.70000, lng: -89.23000 },
-    endPoint: { lat: 13.70500, lng: -89.24000 },
-    path: [
-      { lat: 13.70000, lng: -89.23000 },
-      { lat: 13.70200, lng: -89.23500 },
-      { lat: 13.70500, lng: -89.24000 },
-    ],
-  },
-];
-
-// Accede a la API Key desde las variables de entorno
-const GMAPS = import.meta.env.VITE_MAPS_API_KEY;
-
-const MapView = () => {
+const MapView = ({ mapUrl }) => {
   useEffect(() => {
-    // Carga la API de Google Maps usando la API Key
-    const loader = new Loader({
-      apiKey: GMAPS,
-      version: "weekly",
-      libraries: ["places"],
-    });
+    if (!mapUrl) return;  // Si no hay URL, no renderizamos nada
 
-    loader.load().then(() => {
-      // Crea el mapa
-      const map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 13.69294, lng: -89.21819 },
-        zoom: 12,
-      });
+    // Usamos un iframe para mostrar el mapa
+    const iframe = document.createElement("iframe");
+    iframe.src = mapUrl;
+    iframe.width = "100%";
+    iframe.height = "100%";
+    iframe.style.border = "none";
+    document.getElementById("map").appendChild(iframe);
+  }, [mapUrl]);  // Solo se ejecuta si `mapUrl` cambia
 
-      // Añade las rutas de prueba al mapa
-      testRoutes.forEach((route) => {
-        // Marcador del punto de inicio
-        new google.maps.Marker({
-          position: route.startPoint,
-          map,
-          title: `Inicio: ${route.name}`,
-        });
-
-        // Marcador del punto final
-        new google.maps.Marker({
-          position: route.endPoint,
-          map,
-          title: `Final: ${route.name}`,
-        });
-
-        // Dibuja la ruta como Polyline
-        new google.maps.Polyline({
-          path: route.path,
-          geodesic: true,
-          strokeColor: "#FF0000",
-          strokeOpacity: 1.0,
-          strokeWeight: 4,
-          map,
-        });
-      });
-    });
-  }, []);
-
-  return (
-    <>
-    // iframe dinamico que debe proporcionarse al seleccionar el checbox
-    </>
-  );
+  return <div id="map" style={{ height: "100%" }}></div>;  // Contenedor del mapa
 };
 
 export default MapView;
