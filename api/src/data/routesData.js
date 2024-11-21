@@ -3,6 +3,7 @@ const routes = [
     {
         "code": "AB029GO",
         "routeNumber": "29-G",
+        "routeName": "Jard. de San Bartolo - San Bartolo - Metrocentro y viceversa",
         "startTime": "4:40 AM",
         "endTime": "8:00 PM",
         "department": "san salvador",
@@ -48,6 +49,7 @@ const routes = [
     {
         "code": "AB029HO",
         "routeNumber": "29-H",
+        "routeName": "Cumbres de San Bartolo - San Bartolo - Soyapango - Metrocentro y viceversa",
         "startTime": "5:00 AM",
         "endTime": "7:40 PM",
         "department": "san salvador",
@@ -98,6 +100,7 @@ const routes = [
     {
         "code": "AB030BO",
         "routeNumber": "30-B",
+        "routeName": "Col. Las Terrazas - Ayutuxtepeque - Col. San Benito y viceversa",
         "startTime": "4:50 AM",
         "endTime": "8:30 PM",
         "department": "san salvador",
@@ -143,6 +146,7 @@ const routes = [
     {
         "code": "AB030X1",
         "routeNumber": "30-1",
+        "routeName": "Col. Metrópolis - Metrocentro - Parque Infantil - 8 O Av. Norte - 10 C. Ote (S.S.) y viceversa",
         "startTime": "4:45 AM",
         "endTime": "9:00 PM",
         "department": "san salvador",
@@ -185,6 +189,7 @@ const routes = [
     {
         "code": "AB031XO",
         "routeNumber": "31",
+        "routeName": "Col. Monte Carmelo - Zacamil - Mejicanos y viceversa",
         "startTime": "5:00 AM",
         "endTime": "7:00 PM",
         "department": "san salvador",
@@ -229,6 +234,7 @@ const routes = [
     {
         "code": "AB031XE",
         "routeNumber": "31XE",
+        "routeName": "Col. Monte Carmelo - Zacamil - Mejicanos y viceversa",
         "startTime": "5:00 AM",
         "endTime": "7:00 PM",
         "department": "san salvador",
@@ -272,6 +278,7 @@ const routes = [
     {
         "code": "AB034BO",
         "routeNumber": "34-B",
+        "routeName": "Terminal de Ote - Terminal de Occidente - Santa Elena y viceversa",
         "startTime": "4:40 AM",
         "endTime": "7:00 PM",
         "department": "san salvador",
@@ -307,6 +314,7 @@ const routes = [
     {
         "code": "AB037BOSS",
         "routeNumber": "37-B",
+        "routeName": "Cantón Agua Zarca - San Marcos - Mercado Central y viceversa",
         "startTime": "6:00 AM",
         "endTime": "7:40 PM",
         "department": "san salvador",
@@ -330,6 +338,7 @@ const routes = [
     {
         "code": "AB037AOSS",
         "routeNumber": "37-A",
+        "routeName": "Cantón Las Casitas - San Marcos - Mercado Central y viceversa",
         "startTime": "6:00 AM",
         "endTime": "7:40 PM",
         "department": "san salvador",
@@ -350,6 +359,7 @@ const routes = [
     {
         "code": "AB037A1SS",
         "routeNumber": "37-A 1",
+        "routeName": "Cantón Joya de Girón - El Guaje 1 - Las Casitas - San Marcos - Mercado Central y viceversa",
         "startTime": "6:00 AM",
         "endTime": "7:40 PM",
         "department": "san salvador",
@@ -371,6 +381,7 @@ const routes = [
     {
         "code": "AB038AO",
         "routeNumber": "38-A",
+        "routeName": "San José Las Flores - Apopa - Av. Norte (S.S.) y viceversa",
         "startTime": "4:00 AM",
         "endTime": "7:15 PM",
         "department": "san salvador",
@@ -406,6 +417,7 @@ const routes = [
     {
         "code": "AB038BO",
         "routeNumber": "38-B",
+        "routeName": "Col. Valle del Sol - Col. Tikal - Apopa - 20 Calle Ote. (S.S.) y viceversa",
         "startTime": "5:00 AM",
         "endTime": "8:00 PM",
         "department": "san salvador",
@@ -441,6 +453,7 @@ const routes = [
     {
         "code": "AB038CO",
         "routeNumber": "38-C",
+        "routeName": "Residencial Valle Verde (Apopa) - Centro Judicial Isidro Menéndez y viceversa",
         "startTime": "4:00 AM",
         "endTime": "8:00 PM",
         "department": "san salvador",
@@ -475,6 +488,7 @@ const routes = [
     {
         "code": "AB044X1",
         "routeNumber": "44",
+        "routeName": "Antiguo Cuscatlán - Metrocentro - Zacamil y viceversa",
         "startTime": "5:00 AM",
         "endTime": "7:00 PM",
         "department": "san salvador",
@@ -510,6 +524,7 @@ const routes = [
     {
         "code": "AB044X2",
         "routeNumber": "44 microbus",
+        "routeName": "Antiguo Cuscatlán - Zacamil y viceversa",
         "startTime": "5:00 AM",
         "endTime": "7:00 PM",
         "department": "san salvador",
@@ -561,6 +576,7 @@ const routes = [
     {
         "code": "AB101A1",
         "routeNumber": "101-A",
+        "routeName": "Colonia Las Delicias (Santa Tecla) - 5 Calle Poniente y 11 Avenida Norte (San Salvador) y viceversa",
         "startTime": "5:00 AM",
         "endTime": "8:00 PM",
         "department": "san salvador",
@@ -602,6 +618,7 @@ const routes = [
     {
         "code": "AB101A2",
         "routeNumber": "101-A vía Shell",
+        "routeName": "Col. Las Delicias - Santa Tecla - San Salvador y viceversa (Vía Shell)",
         "startTime": "5 AM",
         "endTime": "8 PM",
         "department": "san salvador",
@@ -649,6 +666,7 @@ const routes = [
     {
         "code": "AB101B2",
         "routeNumber": "101-B MB",
+        "routeName": "Alpes Suizos - Col. Quezaltepec - San Salvador y viceversa",
         "startTime": "5 AM",
         "endTime": "8 PM",
         "department": "san salvador",
@@ -690,6 +708,7 @@ const routes = [
     {
         "code": "AB042BO",
         "routeNumber": "42-B",
+        "routeName": "Col. Santa Mónica - Ciudad Merliot - 12 Av. Sur - San Salvador y viceversa",
         "startTime": "5:10 AM",
         "endTime": "7:30 PM",
         "department": "san salvador",
@@ -733,6 +752,7 @@ const routes = [
     {
         "code": "AB101DO",
         "routeNumber": "101-D",
+        "routeName": "Residencial San Antonio - Santa Tecla - San Salvador y viceversa",
         "startTime": "4:15 AM",
         "endTime": "9:00 PM",
         "department": "san salvador",
