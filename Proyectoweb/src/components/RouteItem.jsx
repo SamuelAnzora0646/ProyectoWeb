@@ -1,25 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const RouteItem = ({ route, onSelect, isSelected }) => {
   const [showStops, setShowStops] = useState(false); // Para controlar la visibilidad de las paradas
-  const [mapUrl, setMapUrl] = useState(""); // Variable para almacenar la URL del mapa
 
   const toggleStops = () => {
     setShowStops((prevState) => !prevState); // Alternar la visibilidad de las paradas
   };
 
   const handleSelectRoute = () => {
-    onSelect(route.routeNumber);
-    setMapUrl(route.map); // Guardamos la URL del mapa en la variable de estado `mapUrl`
+    onSelect(route.routeNumber); // Informa al padre de la selección
   };
-
-  // Verificar en la consola que `mapUrl` se actualiza correctamente
-  useEffect(() => {
-    // Solo se actualiza si route.map tiene un valor
-    if (route.map) {
-      setMapUrl(route.map);
-    }
-  }, [route.map]); // Esto se ejecuta cuando `route.map` cambia
 
   return (
     <div
@@ -87,11 +77,16 @@ const RouteItem = ({ route, onSelect, isSelected }) => {
           </div>
         )}
 
-        {/* Mostrar el mapa como texto (usando la variable mapUrl) */}
-        {mapUrl && (
-          <div className="map-text mt-3">
-            {/* <strong>Mapa de la Ruta:</strong> */}
-            {/* <p>{mapUrl}</p>  */}
+        {/* Mostrar el iframe solo si se ha seleccionado */}
+        {isSelected && route.map && (
+          <div className="map-container mt-3">
+            <iframe
+              src={route.map.match(/src='([^']+)'/)?.[1] || ""}
+              width="640"
+              height="480"
+              style={{ border: "none" }}
+              title={`Mapa de la Ruta ${route.routeNumber}`}
+            ></iframe>
           </div>
         )}
       </div>
