@@ -63,14 +63,16 @@ const RouteItem = ({ route, onSelect, isSelected }) => {
                 ))}
               </ul>
             </div>
-            <div>
-              <strong>Paradas de regreso:</strong>
-              <ul>
-                {route.return.map((stop, index) => (
-                  <li key={index}>{stop}</li>
-                ))}
-              </ul>
-            </div>
+            {route.return && route.return.length > 0 && (
+              <div>
+                <strong>Paradas de regreso:</strong>
+                <ul>
+                  {route.return.map((stop, index) => (
+                    <li key={index}>{stop}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         )}
 

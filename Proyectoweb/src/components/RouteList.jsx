@@ -19,6 +19,9 @@ const RouteList = ({ onRouteSelect }) => {
           setRoutes(response.data);
           setFilteredRoutes(response.data);
 
+          // Comprobación de la estructura de los datos
+          console.log(response.data);  // Verifica la estructura de las rutas
+
           // Obtener lista de departamentos únicos
           const uniqueDepartments = [
             ...new Set(response.data.map(route => route.department)),
