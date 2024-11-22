@@ -29,7 +29,6 @@ const App = () => {
         <Footer /> {/* Pie de página */}
       </Router>
     </AuthProvider>
-  );
-};
+  );};
 
 export default App;

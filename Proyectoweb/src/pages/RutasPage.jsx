@@ -3,41 +3,39 @@ import RouteList from '../components/RouteList';
 import MapView from '../components/MapView';
 
 const RutasPage = () => {
-  const [selectedRoute, setSelectedRoute] = useState(null);  // Solo una ruta seleccionada
-  const [selectedMapUrl, setSelectedMapUrl] = useState('');   // URL del mapa seleccionada
+  const [selectedRoute, setSelectedRoute] = useState(null);
+  const [selectedMapUrl, setSelectedMapUrl] = useState('');
 
-  // Función que maneja la selección de una ruta
   const handleRouteSelect = (route) => {
-    // Si la misma ruta es seleccionada nuevamente, la desmarcamos
     if (selectedRoute?.routeNumber === route.routeNumber) {
       setSelectedRoute(null);
       setSelectedMapUrl('');
     } else {
-      setSelectedRoute(route);  // Seleccionamos la nueva ruta
-      const mapUrl = route.map.match(/src='([^']+)'/)?.[1] || '';  // Extraemos la URL del mapa
-      setSelectedMapUrl(mapUrl);  // Guardamos la URL del mapa seleccionada
+      setSelectedRoute(route);
+      const mapUrl = route.map.match(/src='([^']+)'/)?.[1] || '';
+      setSelectedMapUrl(mapUrl);
     }
   };
 
   return (
-    <div className="container my-4">
-      <div className="row" style={{ height: 'calc(100vh - 100px)' }}>
+    <div className="container-fluid px-3">
+      <div className="row g-3 mb-5">
         {/* Lista de Rutas */}
-        <div className="col-md-5 d-flex flex-column" style={{ height: '100%' }}>
-          <h5 className="mb-4">Lista de Rutas</h5>
-          <div className="flex-grow-1 overflow-auto border p-2">
+        <div className="col-12 col-md-5 d-flex flex-column">
+          <h5 className="mb-3 text-center text-md-start">Lista de Rutas</h5>
+          <div className="border flex-grow-1 p-2 overflow-auto">
             <RouteList
-              onRouteSelect={handleRouteSelect}  // Función de selección de ruta
-              selectedRoute={selectedRoute}  // Pasamos la ruta seleccionada
+              onRouteSelect={handleRouteSelect}
+              selectedRoute={selectedRoute}
             />
           </div>
         </div>
 
         {/* Mapa de Rutas */}
-        <div className="col-md-7 d-flex flex-column" style={{ height: '100%' }}>
-          <h5 className="mb-4">Mapa de Rutas</h5>
-          <div className="flex-grow-1 border">
-            <MapView mapUrl={selectedMapUrl} />  {/* Pasamos la URL del mapa a MapView */}
+        <div className="col-12 col-md-7 d-flex flex-column">
+          <h5 className="mb-3 text-center text-md-start">Mapa de Rutas</h5>
+          <div className="border flex-grow-1" style={{ minHeight: '400px' }}>
+            <MapView mapUrl={selectedMapUrl} />
           </div>
         </div>
       </div>
