@@ -229,7 +229,7 @@ const routes = [
             "Central 3",
             "Plaza El Trébol"
         ],
-        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1oFMVn02A5IZhtI4_yZZSCTbBsz8n4lg&ehbc=2E312F' width='640' height='480'></iframe>"
+        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1E2Mhrkz-Q9tSdsYfsO-QJHigH1HFUzg&ehbc=2E312F' width='640' height='480'></iframe>"
     },
     {
         "code": "AB031XE",
@@ -273,7 +273,7 @@ const routes = [
             "Universidad Politécnica de El Salvador",
             "La Avenida"
         ],
-        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1hSPKf7mFk2gk1K4kvN0cYf85XnakAx8&ehbc=2E312F' width='640' height='480'></iframe>"
+        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=164niE-z3HlLO273nWoXGaHsofpB-OZY&ehbc=2E312F' width='640' height='480'></iframe>"
     },
     {
         "code": "AB034BO",
@@ -794,7 +794,7 @@ const routes = [
             "Avenida España"
         ],
         "return": ["Calle Los Sisimiles", "Plaza La Biblia", "Redondel Masferrer"],
-        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1Vp3XbKtptpGsquBqTVVws5Jd5YFcDJw&ehbc=2E312F' width='640' height='480'></iframe>"
+        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1jM7S9ERQ2EeYho5qQVhwkkN0wZ5B9oc&ehbc=2E312F' width='640' height='480'></iframe>"
     }
 ];
 
