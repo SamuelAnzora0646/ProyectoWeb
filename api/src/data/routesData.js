@@ -229,7 +229,7 @@ const routes = [
             "Central 3",
             "Plaza El Trébol"
         ],
-        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1E2Mhrkz-Q9tSdsYfsO-QJHigH1HFUzg&ehbc=2E312F' width='640' height='480'></iframe>"
+        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1F3aM0d49Dnt58qRDqydswrJD20lFPMc&ehbc=2E312F' width='640' height='480'></iframe>"
     },
     {
         "code": "AB031XE",
