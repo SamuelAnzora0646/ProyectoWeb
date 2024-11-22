@@ -46,12 +46,7 @@ const RouteList = ({ onRouteSelect, selectedRoute }) => {
     );
     
     // Filtrar también por el término de búsqueda
-    const filteredRoutes = filteredByDepartment.filter((route) =>
-      route.routeNumber.toLowerCase().includes(searchTerm.toLowerCase().replace(/\s+/g, '')) ||
-      route.routeName.toLowerCase().includes(searchTerm.toLowerCase().replace(/\s+/g, ''))
-    );
-
-    setFilteredRoutes(filteredRoutes);
+    filterRoutes(filteredByDepartment);
   };
 
   // Función para manejar la búsqueda
@@ -61,8 +56,8 @@ const RouteList = ({ onRouteSelect, selectedRoute }) => {
 
     // Filtrar rutas por el término de búsqueda, ignorando los espacios adicionales
     const filteredRoutes = routes.filter((route) =>
-      route.routeNumber.toLowerCase().includes(search.toLowerCase().replace(/\s+/g, '')) ||
-      route.routeName.toLowerCase().includes(search.toLowerCase().replace(/\s+/g, ''))
+      route.routeNumber.toLowerCase().includes(search.toLowerCase()) ||
+      route.routeName.toLowerCase().includes(search.toLowerCase())
     );
 
     // Aplicar también el filtro por departamento si está seleccionado
@@ -71,6 +66,15 @@ const RouteList = ({ onRouteSelect, selectedRoute }) => {
     } else {
       setFilteredRoutes(filteredRoutes);
     }
+  };
+
+  // Función central para filtrar rutas por el término de búsqueda
+  const filterRoutes = (routesToFilter) => {
+    const filteredRoutes = routesToFilter.filter((route) =>
+      route.routeNumber.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      route.routeName.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredRoutes(filteredRoutes);
   };
 
   return (

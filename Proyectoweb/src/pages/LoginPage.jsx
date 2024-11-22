@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext'; // Asegúrate de que la ruta sea correcta
 import { signInWithPopup } from 'firebase/auth'; // Necesitamos esta función de Firebase
 import { auth, googleProvider } from '../firebaseConfig';  // Importa el googleProvider desde firebaseConfig
+import logo from '../assets/logo.jpg'; // Importa la imagen
 
 const LoginPage = () => {
   const { login } = useContext(AuthContext); // Usamos el login desde el contexto
@@ -105,7 +106,7 @@ const LoginPage = () => {
         <Col xs={12} md={6} lg={8} className="d-flex justify-content-center align-items-center my-3">
           <div className="text-center">
             <img 
-              src="../../public/LOGO RUTAS 503.jpg"
+              src={logo}  // Usamos la variable importada
               alt="Imagen de bienvenida"
               className="img-fluid"
               style={{ maxWidth: '80%' }}

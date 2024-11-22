@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom'; // Importar el hook de navegación
+import logo from '../assets/logo.jpg'; // Importación de la imagen
 
 const HomePage = () => {
   const navigate = useNavigate(); // Hook para manejar la navegación
@@ -27,8 +28,8 @@ const HomePage = () => {
         </Col>
         <Col xs={12} md={6} className="text-center">
           <img
-            src="../../public/LOGO RUTAS 503.jpg"
-            alt="Logo Rutas 503"
+            src={logo}  // Usar la variable importada que contiene la ruta de la imagen
+            alt="logo"
             className="img-fluid"
             style={{ maxWidth: '80%' }}
           />

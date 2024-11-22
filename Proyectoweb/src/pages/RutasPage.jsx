@@ -18,7 +18,7 @@ const RutasPage = () => {
   };
 
   return (
-    <div className="container-fluid px-3">
+    <div className="container-fluid px-3 my-4 ">
       <div className="row g-3 mb-5">
         {/* Lista de Rutas */}
         <div className="col-12 col-md-5 d-flex flex-column">
