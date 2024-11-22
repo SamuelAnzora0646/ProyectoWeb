@@ -1,1070 +1,801 @@
 // Datos de rutas y recorridos
 const routes = [
     {
-        code: 'AB00A0',
-        routeNumber: 'A',
-        routeName: 'Colonia 10 de Octubre - San Marcos - 15 Calle Poniente y viceversa',
-        startTime: '5:00 a.m.',
-        endTime: '8:32 p.m.',
-        department: 'San Salvador'
-    },
-    {
-        code: 'AB00B0',
-        routeNumber: 'B',
-        routeName: 'Calle San Sebastián y 5 Avenida Sur - Ciudad Delgado - Metrocentro - UES y viceversa',
-        startTime: '6:00 a.m.',
-        endTime: '6:30 p.m.',
-        department: 'San Salvador'
-    },
-    {
-        code: 'AB001X0',
-        routeNumber: '1',
-        routeName: 'San Pedro - Ayutuxtepeque - Zacamil - Centro - Colonia América y viceversa',
-        startTime: '5:00 a.m.',
-        endTime: '8:00 p.m.',
-        department: 'San Salvador'
-    },
-    {
-        code: 'AB002A1',
-        routeNumber: '2A-1',
-        routeName: 'Colonia Buena Vista (Mejicanos) - 3a Calle Oriente - 2a Avenida Norte (San Salvador) y viceversa',
-        startTime: '4:50 a.m.',
-        endTime: '8:36 p.m.',
-        department: 'San Salvador'
-    },
-    {
-        code: 'AB002A2',
-        routeNumber: '2A-2',
-        routeName: 'Colonia Buena Vista (Mejicanos) - 3a Calle Poniente - 2a Avenida Norte (San Salvador) y viceversa',
-        startTime: '4:45 a.m.',
-        endTime: '8:35 p.m.',
-        department: 'San Salvador'
-    },
-    {
-        code: 'AB002B1',
-        routeNumber: '2-B',
-        routeName: 'Mejicanos - Modelo - Colonia Costa Rica y viceversa',
-        startTime: '4:40 a.m.',
-        endTime: '8:30 p.m.',
-        department: 'San Salvador'
-    },
-    {
-        code: 'AB002B1E',
-        routeNumber: '02B-1E',
-        routeName: 'Mejicanos - Modelo - Colonia Costa Rica y viceversa (Servicio Exclusivo)',
-        startTime: '4:40 a.m.',
-        endTime: '8:30 p.m.',
-        department: 'San Salvador'
-    },
-    {
-        "code": "AB002B2",
-        "routeNumber": "02B-2",
-        "routeName": "Mejicanos - San Jacinto - Colonia Costa Rica y viceversa",
-        "startTime": "4:40 a.m.",
-        "endTime": "8:30 a.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB002B2E",
-        "routeNumber": "02B-2E",
-        "routeName": "Mejicanos - San Jacinto - Colonia Costa Rica y viceversa (Servicio Exclusivo)",
-        "startTime": "4:40 a.m.",
-        "endTime": "8:30 a.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB002CO",
-        "routeNumber": "2-C",
-        "routeName": "Mejicanos - Metrocentro - Centro - Reloj de Flores y viceversa",
-        "startTime": "5:40 a.m.",
-        "endTime": "8:00 a.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB002CE",
-        "routeNumber": "002-CE",
-        "routeName": "Mejicanos - Metrocentro - Centro - Reloj de Flores y viceversa",
-        "startTime": "5:40 a.m.",
-        "endTime": "8:00 a.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB003AO",
-        "routeNumber": "3-A",
-        "routeName": "Col. Sierra Morena - Col. Las Brisas - Soyapango - Centro - Col. Atlacatl y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "8:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB003AE",
-        "routeNumber": "3-AE",
-        "routeName": "Col. Sierra Morena - Col. Las Brisas - Soyapango - Centro - Col. Atlacatl y viceversa (Servicio Exclusivo)",
-        "startTime": "5:00 a.m.",
-        "endTime": "8:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB003XO",
-        "routeNumber": "3",
-        "routeName": "Col. Sierra Morena - Soyapango - Centro - Col. Atlacatl y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "8:00 a.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB003XE",
-        "routeNumber": "003-XE",
-        "routeName": "Col. Sierra Morena - Soyapango - Centro - Col. Atlacatl y viceversa (Servicio Exclusivo)",
-        "startTime": "5:00 a.m.",
-        "endTime": "8:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB004XO",
-        "routeNumber": "4",
-        "routeName": "Km 10 1/2 Troncal del Norte - Ciudad Delgado - Centro Hospital - Terminal de Occidente y viceversa",
-        "startTime": "4:50 a.m.",
-        "endTime": "9:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB005XO",
-        "routeNumber": "5",
-        "routeName": "Reparto San Patricio - La Cima I, II, III, IV - 8 Avenida Norte (San Salvador) y viceversa",
-        "startTime": "4:39 a.m.",
-        "endTime": "8:33 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB005XE",
-        "routeNumber": "005-XE",
-        "routeName": "Reparto San Patricio - La Cima I, II, III, IV - 8 Avenida Norte (San Salvador) y viceversa (Servicio Exclusivo)",
-        "startTime": "4:39 a.m.",
-        "endTime": "8:33 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB006X1",
-        "routeNumber": "6",
-        "routeName": "Vía Mariona (Cuscatancingo) - Mejicanos - Av. España - 90 C. Ote (San Salvador) y viceversa",
-        "startTime": "4:30 a.m.",
-        "endTime": "9:15 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB006X2",
-        "routeNumber": "6",
-        "routeName": "Vía Mariona - Mejicanos - Parque Infantil y viceversa",
-        "startTime": "5:18 a.m.",
-        "endTime": "7:48 a.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB006X3",
-        "routeNumber": "6",
-        "routeName": "Vía Mariona - Mejicanos - Parque Infantil y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "9:10 a.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB007CO",
-        "routeNumber": "7-C",
-        "routeName": "Bosques UES de Prusia - Los Santos 1 - Terminal de Occidente y viceversa",
-        "startTime": "4:30 a.m.",
-        "endTime": "8:00 a.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB007DO",
-        "routeNumber": "7-D",
-        "routeName": "Col. Los Conacastes - Centro - Metrocentro - Galerías Escalón y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "7:50 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB007XO",
-        "routeNumber": "7",
-        "routeName": "Col. Guadalupe (Soyapango) - Plaza Las Américas - Galerías y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "8:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB008AOSS",
-        "routeNumber": "8-AOSS",
-        "routeName": "Colonia Jardines (San Marcos) - Colonia Roma (San Salvador) y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "9:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB008AESS",
-        "routeNumber": "08A-E",
-        "routeName": "Col. Jardines (San Marcos) - Col. Roma (San Salvador) y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "9:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB008X0",
-        "routeNumber": "8",
-        "routeName": "Col. Dolores - Terminal de Oriente - Col. La Chacra y viceversa",
-        "startTime": "4:40 a.m.",
-        "endTime": "7:36 a.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB009XO",
-        "routeNumber": "9",
-        "routeName": "Ciudad Credisa - Amatepec - Zacamil - Santísima Trinidad y viceversa",
-        "startTime": "4:20 a.m.",
-        "endTime": "8:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "ABOIOXO",
-        "routeNumber": "10",
-        "routeName": "Urb. Colinas del Norte - Centro - Col. Vista Hermosa - Monserrat y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "8:20 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "ABOIOXE",
-        "routeNumber": "10-XE",
-        "routeName": "Urb. Colinas del Norte - Centro - Col. Vista Hermosa - Monserrat y viceversa (Servicio Exclusivo)",
-        "startTime": "5:00 a.m.",
-        "endTime": "8:20 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "ABOILXO",
-        "routeNumber": "10",
-        "routeName": "Col. Gálvez - Santa Fe - San Marcos - Hospitales - Res. San Luis y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "8:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB012XOSS",
-        "routeNumber": "12",
-        "routeName": "Cantón El Cedro - Caserío Mil Cumbres - Planes de Renderos - Mercado Central y viceversa",
-        "startTime": "4:35 a.m.",
-        "endTime": "9:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB013XO",
-        "routeNumber": "13",
-        "routeName": "Colonia Santa Lucia - Soyapango - Parque Infantil y viceversa",
-        "startTime": "4:40 a.m.",
-        "endTime": "8:00 a.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB014AO",
-        "routeNumber": "14-A",
-        "routeName": "Pto. Sta. Teresa - San Martín - 12 Av. Sur - 2 C. Ote y Av. Cervantes (San Salvador) y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "7:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB014XO",
-        "routeNumber": "14",
-        "routeName": "San Martín - Soyapango - Alcaldía de San Salvador y viceversa",
-        "startTime": "4:30 a.m.",
-        "endTime": "8:30 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB015XO",
-        "routeNumber": "15",
-        "routeName": "Turicentro Apulo - Ilopango - Av. España y 9a Calle Oriente San Salvador y viceversa",
-        "startTime": "4:45 a.m.",
-        "endTime": "8:30 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB016XO",
-        "routeNumber": "16",
-        "routeName": "San Antonio Abad - Plaza Las Américas - 9 Av. Norte - Juan Pablo II y viceversa",
-        "startTime": "5:30 a.m.",
-        "endTime": "7:30 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB017BOSS",
-        "routeNumber": "17-8",
-        "routeName": "Hacienda Melara - Rosario de Mora - Planes de Renderos - Mercado Central y viceversa",
-        "startTime": "5:15 a.m.",
-        "endTime": "6:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB017BISS",
-        "routeNumber": "17-8",
-        "routeName": "Cantón La Barrosa - Rosario de Mora - Mercado Central (San Salvador) y viceversa",
-        "startTime": "4:00 a.m.",
-        "endTime": "6:15 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB018XOSS",
-        "routeNumber": "18",
-        "routeName": "Cantón Lomas de Candelaria - C.Ant. Huizúcar - Blvd. Los Próceres - Mdo. Ctral y viceversa",
-        "startTime": "6:00 a.m.",
-        "endTime": "6:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB019XO",
-        "routeNumber": "19",
-        "routeName": "Cantón San José Cortez - Cantón Plan del Pino - Soyapango y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "7:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB020XO",
-        "routeNumber": "20",
-        "routeName": "Cuscatancingo - 20 Avenida Norte - Avenida España - Parque Infantil y viceversa",
-        "startTime": "5:30 a.m.",
-        "endTime": "7:30 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB021AOSS",
-        "routeNumber": "21-A",
-        "routeName": "Santiago Texacuangos - C.A. San Marcos - 4 C. Ote. - Av. Cuscatlán y viceversa",
-        "startTime": "4:30 a.m.",
-        "endTime": "6:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB021BOSS",
-        "routeNumber": "21-B",
-        "routeName": "Santiago Texacuango - Mercado Central (San Salvador) - Vía Autopista y viceversa",
-        "startTime": "6:00 a.m.",
-        "endTime": "6:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB022XO",
-        "routeNumber": "22",
-        "routeName": "Reparto Santa Clara - Juzgados - San Antonio Abad y viceversa",
-        "startTime": "4:30 a.m.",
-        "endTime": "8:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB022XE",
-        "routeNumber": "22-XE",
-        "routeName": "Reparto Santa Clara - Juzgados - San Antonio Abad y viceversa (Servicio Exclusivo)",
-        "startTime": "4:30 a.m.",
-        "endTime": "8:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB023AO",
-        "routeNumber": "23-A",
-        "routeName": "San Ramón - 29 Avenida Norte - Parque Infantil y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "7:30 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB023BO",
-        "routeNumber": "23-8",
-        "routeName": "Cantón San Roque - 3a Calle Ote. y Av. Nte. y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "7:30 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB024XO",
-        "routeNumber": "24",
-        "routeName": "Cuscatancingo - Mejicanos - Parque Infantil y viceversa",
-        "startTime": "5:30 a.m.",
-        "endTime": "7:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB026XO",
-        "routeNumber": "26",
-        "routeName": "Jardines de San Marcos - Autopista Norte - Colonia Miralvalle y viceversa",
-        "startTime": "4:50 a.m.",
-        "endTime": "7:50 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB026XEO",
-        "routeNumber": "26-XE",
-        "routeName": "Jardines de San Marcos - Autopista Norte - Col. Miralvalle y viceversa (Servicio Exclusivo)",
-        "startTime": "4:50 a.m.",
-        "endTime": "7:50 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB027XO",
-        "routeNumber": "27",
-        "routeName": "Col. El Paraíso - Terminal - Jnes de Monserrat - Los Eliseos - Blvd Los Próceres y viceversa",
-        "startTime": "4:30 a.m.",
-        "endTime": "7:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB027XE",
-        "routeNumber": "27-XE",
-        "routeName": "Col. El Paraíso - Terminal - Jnes de Monserrat - Los Eliseos - Blvd Los Próceres y viceversa (Servicio Exclusivo)",
-        "startTime": "4:30 a.m.",
-        "endTime": "7:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB028XO",
-        "routeNumber": "28",
-        "routeName": "Col IVU - Mercado Central - Terminal Ote. y viceversa",
-        "startTime": "5:30 a.m.",
-        "endTime": "8:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB029AO",
-        "routeNumber": "29-A",
-        "routeName": "Rto. Valle Nuevo - Col. Sta. Lucia - Metrocentro - Miramonte - Av. Bernal y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "7:20 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB029AE",
-        "routeNumber": "29-AE",
-        "routeName": "Rto. Valle Nuevo - Col. Sta. Lucia - Metrocentro - Miramonte - Av. Bernal y viceversa (Servicio Exclusivo)",
-        "startTime": "5:00 a.m.",
-        "endTime": "7:20 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB029CO",
-        "routeNumber": "29-C",
-        "routeName": "Col. Alta y viceversa",
-        "startTime": "4:10 a.m.",
-        "endTime": "8:45 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB029C2",
-        "routeNumber": "29-C2",
-        "routeName": "Colonia Altavista - San Bartolo - Soyapango - (Retorno Hiper Paiz) - Metrocentro y viceversa",
-        "startTime": "9:00 p.m.",
-        "endTime": "9:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB029C2E",
-        "routeNumber": "29-C2E",
-        "routeName": "Col. Alta Vista - San Bartolo - Soyapango - Metrocentro y viceversa (Servicio Exclusivo)",
-        "startTime": "4:00 a.m.",
-        "endTime": "9:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB029CE",
-        "routeNumber": "29-CE",
-        "routeName": "Col. Alta Vista - San Bartolo - Soyapango - Metrocentro y viceversa (Servicio Exclusivo)",
-        "startTime": "4:10 a.m.",
-        "endTime": "8:45 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB029DE",
-        "routeNumber": "29-D",
-        "routeName": "Reparto Las Cañas - Lopango - Metrocentro y viceversa (Servicio Exclusivo)",
-        "startTime": "4:20 a.m.",
-        "endTime": "8:20 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB029EO",
-        "routeNumber": "29-E",
-        "routeName": "Col. Cimas de San Bartolo - San Bartolo - Soyapango (C/Retorno H. Paiz) - Metrocentro y viceversa",
-        "startTime": "4:15 a.m.",
-        "endTime": "8:45 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB029EE",
-        "routeNumber": "29-E",
-        "routeName": "Col. Cimas de San Bartolo - San Bartolo - Soyapango - Metrocentro y viceversa (Servicio Exclusivo)",
-        "startTime": "4:15 a.m.",
-        "endTime": "8:45 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB029FO",
-        "routeNumber": "29-F",
-        "routeName": "Rto. San Felipe - San Bartolo - Soyapango - Metrocentro y viceversa",
-        "startTime": "4:15 a.m.",
-        "endTime": "8:30 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB029FE",
-        "routeNumber": "29-F",
-        "routeName": "Reparto San Felipe - San Bartolo - Soyapango - Metrocentro y viceversa (Servicio Exclusivo)",
-        "startTime": "4:15 a.m.",
-        "endTime": "8:30 p.m.",
-        "department": "San Salvador"
-    },
-    {
         "code": "AB029GO",
         "routeNumber": "29-G",
         "routeName": "Jard. de San Bartolo - San Bartolo - Metrocentro y viceversa",
-        "startTime": "4:40 a.m.",
-        "endTime": "8:00 p.m.",
-        "department": "San Salvador"
+        "startTime": "4:40 AM",
+        "endTime": "8:00 PM",
+        "department": "san salvador",
+        "cost": 0.2,
+        "outbound": [
+            "Parque San Bartolo",
+            "Ilopango",
+            "Bulevar del Ejército Nacional",
+            "Aeropuerto Internacional de Ilopango",
+            "Fuerza Aérea de El Salvador",
+            "Cárcel de Mujeres",
+            "Bulevar del Ejército",
+            "Unidad Médica ISSS Ilopango",
+            "Terminal Nuevo Amanecer",
+            "Rotonda El Progreso",
+            "Plaza Mundo Soyapango",
+            "Walmart Soyapango",
+            "Bulevar Venezuela",
+            "Mercado Tinetti",
+            "La Avenida",
+            "Mercado Ex Cuartel",
+            "Plaza Morazán",
+            "Universidad Tecnológica de El Salvador (UTEC)",
+            "Hospital Nacional Rosales",
+            "Universidad Andrés Bello",
+            "Metrosur",
+            "Bulevar de Los Héroes",
+            "Metrocentro"
+        ],
+        "return": [
+            "Instituto Salvadoreño del Seguro Social – Oficinas Administrativas",
+            "Universidad Salvadoreña Alberto Masferrer",
+            "3ª Calle Poniente",
+            "Colegio La Divina Providencia",
+            "Reloj de Flores",
+            "Mercado La Tiendona",
+            "Museo del Ferrocarril y Parque Temático",
+            "Plaza General Manuel José Arce",
+            "IDEM"
+        ],
+        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1fF2nLmwV3KJZnoTYxPuQ2QIHfygrQ5k&ehbc=2E312F' width='640' height='480'></iframe>"
     },
     {
         "code": "AB029HO",
         "routeNumber": "29-H",
         "routeName": "Cumbres de San Bartolo - San Bartolo - Soyapango - Metrocentro y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "7:40 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB029HE",
-        "routeNumber": "29-H",
-        "routeName": "Cumbres de San Bartolo - San Bartolo - Soyapango - Metrocentro y viceversa (Servicio Exclusivo)",
-        "startTime": "5:00 a.m.",
-        "endTime": "7:40 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB029HEX1",
-        "routeNumber": "29-XI",
-        "routeName": "Cumbres de San Bartolo - San Bartolo - Soyapango - Metrocentro y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "7:40 p.m.",
-        "department": "San Salvador"
+        "startTime": "5:00 AM",
+        "endTime": "7:40 PM",
+        "department": "san salvador",
+        "cost": 0.2,
+        "outbound": [
+            "Urbanización Cimas de San Bartolo II",
+            "Lotificación San Bartolo",
+            "Lotificación Bartolo del Norte",
+            "Reparto San Bartolo",
+            "Puente de Ticsa",
+            "Parque San Bartolo",
+            "Ilopango",
+            "Bulevar del Ejército Nacional",
+            "Aeropuerto Internacional de Ilopango",
+            "Fuerza Aérea de El Salvador",
+            "Cárcel de Mujeres",
+            "Bulevar del Ejército",
+            "Unidad Médica ISSS Ilopango",
+            "Terminal Nuevo Amanecer",
+            "Rotonda El Progreso",
+            "Plaza Mundo Soyapango",
+            "Walmart Soyapango",
+            "Bulevar Venezuela",
+            "Mercado Tinetti",
+            "La Avenida",
+            "Mercado Ex Cuartel",
+            "Plaza Morazán",
+            "Universidad Tecnológica de El Salvador (UTEC)",
+            "Hospital Nacional Rosales",
+            "Universidad Andrés Bello",
+            "Metrosur",
+            "Bulevar de Los Héroes",
+            "Metrocentro"
+        ],
+        "return": [
+            "Instituto Salvadoreño del Seguro Social – Oficinas Administrativas",
+            "Universidad Salvadoreña Alberto Masferrer",
+            "3ª Calle Poniente",
+            "Colegio La Divina Providencia",
+            "Reloj de Flores",
+            "Mercado La Tiendona",
+            "Museo del Ferrocarril y Parque Temático",
+            "Plaza General Manuel José Arce",
+            "IDEM"
+        ],
+        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=15jUmWZhRgMoGwha2Y03so7xYgeuCy8M&ehbc=2E312F' width='640' height='480'></iframe>"
     },
     {
         "code": "AB030BO",
         "routeNumber": "30-B",
         "routeName": "Col. Las Terrazas - Ayutuxtepeque - Col. San Benito y viceversa",
-        "startTime": "4:50 a.m.",
-        "endTime": "8:30 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB030BE",
-        "routeNumber": "30-BE",
-        "routeName": "Col. Las Terrazas - Ayutuxtepeque - Col. San Benito y viceversa",
-        "startTime": "4:50 a.m.",
-        "endTime": "8:30 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB030XO",
-        "routeNumber": "30",
-        "routeName": "Col. Metrópolis (Mejicanos) - Metrocentro - C. Rubén Darío - II O Av. Sur S.S. y viceversa",
-        "startTime": "4:50 a.m.",
-        "endTime": "8:00 p.m.",
-        "department": "San Salvador"
+        "startTime": "4:50 AM",
+        "endTime": "8:30 PM",
+        "department": "san salvador",
+        "cost": 0.2,
+        "outbound": [
+            "Ayutuxtepeque",
+            "Parque Residencial Australia",
+            "Unicentro Metrópolis",
+            "José Simeón Cañas",
+            "Colonia Ciudad Satélite",
+            "Hospital Militar Central",
+            "Redondel El Torogoz",
+            "Hospital de Niños Benjamín Bloom",
+            "Bulevar del Ejército",
+            "Ministerio de Hacienda",
+            "Metrocentro San Salvador",
+            "Alameda Juan Pablo II",
+            "Colegio García Flamenco",
+            "Monumento al Divino Salvador del Mundo",
+            "Centro Comercial Galerías",
+            "Fuentes Beethoven",
+            "Paseo General Escalón",
+            "Plaza Chile",
+            "Rotonda Brasil",
+            "Zona Rosa",
+            "Rotonda Italia",
+            "Museo Nacional de Antropología Dr. David J. Guzmán (MUNA)",
+            "Hospital Nacional El Salvador"
+        ],
+        "return": [
+            "Alameda Manuel Enrique Araujo",
+            "Comando de Doctrina y Educación Militar (CODEM)",
+            "Mercado de Artesanías",
+            "Ministerio de Obras Públicas y de Transporte",
+            "Centro Comercial La Mascota",
+            "Museo Forma",
+            "Policía Nacional Civil (Solvencias) – Sucursal Flor Blanca",
+            "Estadio Nacional Jorge Mágico Gonzalez",
+            "Centro Comercial San Luis"
+        ],
+        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1nRs61CS4_g-3ndVsp-LHRBzRoStm7eA&ehbc=2E312F' width='640' height='480'></iframe>"
     },
     {
         "code": "AB030X1",
         "routeNumber": "30-1",
         "routeName": "Col. Metrópolis - Metrocentro - Parque Infantil - 8 O Av. Norte - 10 C. Ote (S.S.) y viceversa",
-        "startTime": "4:45 a.m.",
-        "endTime": "9:00 p.m.",
-        "department": "San Salvador"
+        "startTime": "4:45 AM",
+        "endTime": "9:00 PM",
+        "department": "san salvador",
+        "cost": 0.2,
+        "outbound": [
+            "Walmart Constitución",
+            "Bulevar Constitución",
+            "Calle Zacamil",
+            "Unicentro Metrópolis",
+            "Redondel Zacamil",
+            "Hospital Policlínico Zacamil del ISSS",
+            "Universidad de El Salvador UES",
+            "Redondel Torogoz",
+            "Hospital de Niños Benjamin Bloom",
+            "Bulevar de Los Héroes",
+            "Ministerio de Hacienda",
+            "Metrocentro San Salvador",
+            "Metrosur",
+            "Rotonda Plaza Mexico",
+            "Hospital Pro Familia",
+            "Hospital Central",
+            "Bulevar Tutunichapa",
+            "Centro Judicial Isidro Menéndez",
+            "Universidad Politécnica de El Salvador",
+            "Redondel José Martí",
+            "Parque Infantil de Diversiones"
+        ],
+        "return": [
+            "Mercado Ex Cuartel",
+            "Parque San José",
+            "Plaza Morazán",
+            "Universidad Tecnológica de El Salvador (UTEC)",
+            "Hospital Rosales",
+            "Universidad Dr. Andrés Bello",
+            "Condominios Medicentro La Esperanza",
+            "Colonia Ciudad Satélite"
+        ],
+        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=18vpXZ21LQTRJ69ep3FKip4vrB6xfxJw&ehbc=2E312F' width='640' height='480'></iframe>"
     },
     {
         "code": "AB031XO",
         "routeNumber": "31",
         "routeName": "Col. Monte Carmelo - Zacamil - Mejicanos y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "7:00 p.m.",
-        "department": "San Salvador"
+        "startTime": "5:00 AM",
+        "endTime": "7:00 PM",
+        "department": "san salvador",
+        "cost": 0.2,
+        "outbound": [
+            "Santa Rita",
+            "Plaza Mundo Soyapango",
+            "Rotonda El Progreso",
+            "Bulevar del Ejército",
+            "Cementerio Municipal No. 2 Soyapango",
+            "Cementerio General de Soyapango",
+            "Walmart Soyapango",
+            "Hospital Amatepec del ISSS",
+            "Comunidad Ibérica",
+            "Fenadesal",
+            "Museo del Ferrocarril y Parque Temático",
+            "Mercado La Tiendona",
+            "Reloj de Flores",
+            "Redondel La Isla",
+            "Colonia Don Bosco",
+            "San Judas",
+            "Colonia Guadalupe",
+            "Colonia Isidro Menéndez",
+            "Bulevar Tutunichapa",
+            "Fuente Luminosa",
+            "Condominios Medicentro La Esperanza",
+            "Hospital de Niños Benjamín Bloom",
+            "Universidad de El Salvador",
+            "Alcaldía Municipal de Ayutuxtepeque"
+        ],
+        "return": [
+            "Cementerio Municipal de Mejicanos",
+            "Iglesia La Luz del Mundo",
+            "Parroquia María Auxiliadora",
+            "Instituto Técnico Industrial",
+            "Avenida Delicias",
+            "Central 3",
+            "Plaza El Trébol"
+        ],
+        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1oFMVn02A5IZhtI4_yZZSCTbBsz8n4lg&ehbc=2E312F' width='640' height='480'></iframe>"
     },
     {
         "code": "AB031XE",
-        "routeNumber": "31-XE",
+        "routeNumber": "31XE",
         "routeName": "Col. Monte Carmelo - Zacamil - Mejicanos y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "7:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB034AO",
-        "routeNumber": "34-A",
-        "routeName": "Terminal de Oriente - Terminal de Occidente - San Benito y viceversa",
-        "startTime": "4:40 a.m.",
-        "endTime": "7:00 p.m.",
-        "department": "San Salvador"
+        "startTime": "5:00 AM",
+        "endTime": "7:00 PM",
+        "department": "san salvador",
+        "cost": 0.35,
+        "outbound": [
+            "Santa Rita",
+            "Plaza Mundo Soyapango",
+            "Rotonda El Progreso",
+            "Bulevar del Ejército",
+            "Cementerio Municipal No. 2 Soyapango",
+            "Cementerio General de Soyapango",
+            "Walmart Soyapango",
+            "Hospital Amatepec del ISSS",
+            "Comunidad Ibérica",
+            "Fenadesal",
+            "Museo del Ferrocarril y Parque Temático",
+            "Mercado La Tiendona",
+            "Reloj de Flores",
+            "Redondel La Isla",
+            "Colonia Don Bosco",
+            "San Judas",
+            "Colonia Guadalupe",
+            "Colonia Isidro Menéndez",
+            "Bulevar Tutunichapa",
+            "Fuente Luminosa",
+            "Condominios Medicentro La Esperanza",
+            "Hospital de Niños Benjamín Bloom",
+            "Universidad de El Salvador",
+            "Alcaldía Municipal de Ayutuxtepeque"
+        ],
+        "return": [
+            "Cementerio Municipal de Mejicanos",
+            "Iglesia La Luz del Mundo",
+            "Parroquia María Auxiliadora",
+            "Redondel Don Rua",
+            "Universidad Politécnica de El Salvador",
+            "La Avenida"
+        ],
+        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1hSPKf7mFk2gk1K4kvN0cYf85XnakAx8&ehbc=2E312F' width='640' height='480'></iframe>"
     },
     {
         "code": "AB034BO",
         "routeNumber": "34-B",
         "routeName": "Terminal de Ote - Terminal de Occidente - Santa Elena y viceversa",
-        "startTime": "4:40 a.m.",
-        "endTime": "7:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB035XO",
-        "routeNumber": "35",
-        "routeName": "La Cima IV - Reparto San Patricio - Calle Ote. y Av. Cuscatlán S.S. y viceversa",
-        "startTime": "4:40 a.m.",
-        "endTime": "8:40 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB036XO",
-        "routeNumber": "36",
-        "routeName": "Parque de Lopango - Cton. Asino - Joya Grande y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "7:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB037AOSS",
-        "routeNumber": "37-A",
-        "routeName": "Cantón Las Casitas - San Marcos - Mercado Central y viceversa",
-        "startTime": "6:00 a.m.",
-        "endTime": "7:40 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB037AISS",
-        "routeNumber": "37-A",
-        "routeName": "Cantón Joya de Girón - El Guaje 1 - Las Casitas - San Marcos - Mercado Central y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "7:00 p.m.",
-        "department": "San Salvador"
+        "startTime": "4:40 AM",
+        "endTime": "7:00 PM",
+        "department": "san salvador",
+        "cost": 0.2,
+        "outbound": [
+            "Parque Residencial Lourdes",
+            "Mercado Ex Cuartel",
+            "Parque San José",
+            "Plaza Morazán",
+            "Parque Simón Bolívar",
+            "Iglesia Perpetuo Socorro",
+            "Parque Memorial La Bermeja",
+            "Bulevar Venezuela",
+            "Terminal de Occidente",
+            "Instituto Nacional Técnico Industrial (INTI)",
+            "Ministerio de Obras Públicas y de Transporte",
+            "Mercado Nacional de Artesanías",
+            "Hospital Nacional El Salvador",
+            "Plaza del Soldado",
+            "Multiplaza",
+            "Centro Comercial Las Cascadas",
+            "La Gran Vía",
+            "Bulevar Santa Elena",
+            "Embajada de Los Estados Unidos de América",
+            "Redondel Orden de Malta",
+            "Bulevar Orden de Malta",
+            "Rotonda El Soldado",
+            "Plaza Luis Poma"
+        ],
+        "return": ["Parque Cuscatlán", "IDEM"],
+        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1A53kxMjhP3QsgA1QytwCHZgYHEBRFEA&ehbc=2E312F' width='640' height='480'></iframe>"
     },
     {
         "code": "AB037BOSS",
         "routeNumber": "37-B",
         "routeName": "Cantón Agua Zarca - San Marcos - Mercado Central y viceversa",
-        "startTime": "6:00 a.m.",
-        "endTime": "7:40 p.m.",
-        "department": "San Salvador"
+        "startTime": "6:00 AM",
+        "endTime": "7:40 PM",
+        "department": "san salvador",
+        "cost": 0.36,
+        "outbound": [
+            "Colonia Morán",
+            "San Marcos",
+            "Colonia San Antonio 4",
+            "Colonia Los Andes",
+            "Residencial Terranova",
+            "Colonia Manzano",
+            "Centro de Historia Militar",
+            "Barrio San Jacinto",
+            "Parque Central de San Jacinto",
+            "Barrio Candelaria",
+            "Barrio El Calvario"
+        ],
+        "return": null,
+        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=11n6n9KRr8-kiXX9X8hNKgCAPFSyd1Go&ehbc=2E312F' width='640' height='480'></iframe>"
+    },
+    {
+        "code": "AB037AOSS",
+        "routeNumber": "37-A",
+        "routeName": "Cantón Las Casitas - San Marcos - Mercado Central y viceversa",
+        "startTime": "6:00 AM",
+        "endTime": "7:40 PM",
+        "department": "san salvador",
+        "cost": 0.36,
+        "outbound": [
+            "Colonia Morán",
+            "San Marcos",
+            "Colonia San Antonio 4",
+            "Residencial Terranova",
+            "Colonia Manzano",
+            "Barrio San Jacinto",
+            "Barrio Candelaria",
+            "Barrio El Calvario"
+        ],
+        "return": ["Centro de Historia Militar"],
+        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1I4Usb8PI1YdjPsHwVXZwRWfgqrUnirY&ehbc=2E312F' width='640' height='480'></iframe>"
+    },
+    {
+        "code": "AB037A1SS",
+        "routeNumber": "37-A 1",
+        "routeName": "Cantón Joya de Girón - El Guaje 1 - Las Casitas - San Marcos - Mercado Central y viceversa",
+        "startTime": "6:00 AM",
+        "endTime": "7:40 PM",
+        "department": "san salvador",
+        "cost": 0.34,
+        "outbound": [
+            "Cantón Las Casitas",
+            "Colonia Morán",
+            "San Marcos",
+            "Colonia San Antonio 4",
+            "Residencial Terranova",
+            "Colonia Manzano",
+            "Barrio San Jacinto",
+            "Barrio Candelaria",
+            "Barrio El Calvario"
+        ],
+        "return": ["Centro de Historia Militar"],
+        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1mv5iSHOCNpJ2Lkan0DboGfTIlOK0RrE&ehbc=2E312F' width='640' height='480'></iframe>"
     },
     {
         "code": "AB038AO",
         "routeNumber": "38-A",
         "routeName": "San José Las Flores - Apopa - Av. Norte (S.S.) y viceversa",
-        "startTime": "4:00 a.m.",
-        "endTime": "7:15 p.m.",
-        "department": "San Salvador"
+        "startTime": "4:00 AM",
+        "endTime": "7:15 PM",
+        "department": "san salvador",
+        "cost": 0.29,
+        "outbound": [
+            "Urbanización Distrito Italia Sector 2",
+            "Urbanización Distrito Italia",
+            "Comunidad Los Indígenas",
+            "Residencial Santa Teresa de Las Flores",
+            "Apopa",
+            "Parroquia Santa Catalina de Alejandría",
+            "Parque Noe Canjura",
+            "Carretera Troncal del Norte",
+            "Plaza Mundo Apopa",
+            "Redondel Apopa Autopista Este Oeste",
+            "Reparto Santa Marta",
+            "Refineria Salvadoreña de Azúcar",
+            "Cantón Calle Real",
+            "Colonia Pipil",
+            "Residencial Brisas del Bosque",
+            "Ciudad Delgado",
+            "Colonia San Joaquin Poniente",
+            "Instituto Nacional General Francisco Menéndez (INFRAMEN)",
+            "Colonia La Rábida",
+            "Centro Comercial Las Terrazas",
+            "Colonia 5 de Noviembre",
+            "Parque Centenario",
+            "Mercado Ex Cuartel"
+        ],
+        "return": null,
+        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1ibB9obV5QQmhdPE_3J8X7dxOROth7lM&ehbc=2E312F' width='640' height='480'></iframe>"
     },
     {
         "code": "AB038BO",
         "routeNumber": "38-B",
         "routeName": "Col. Valle del Sol - Col. Tikal - Apopa - 20 Calle Ote. (S.S.) y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "8:00 p.m.",
-        "department": "San Salvador"
+        "startTime": "5:00 AM",
+        "endTime": "8:00 PM",
+        "department": "san salvador",
+        "cost": 0.29,
+        "outbound": [
+            "Urbanización Valle del Sol San Leonardo",
+            "Urbanización San Andrés",
+            "Urbanización Nueva Apopa",
+            "Residencial Ciudad Obrera",
+            "Apopa",
+            "Parroquia Santa Catalina de Alejandría",
+            "Parque Noe Canjura",
+            "Carretera Troncal del Norte",
+            "Plaza Mundo Apopa",
+            "Redondel Apopa Autopista Este Oeste",
+            "Reparto Santa Marta",
+            "Refineria Salvadoreña de Azúcar",
+            "Cantón Calle Real",
+            "Colonia Pipil",
+            "Residencial Brisas del Bosque",
+            "Ciudad Delgado",
+            "Colonia San Joaquin Poniente",
+            "Instituto Nacional General Francisco Menéndez (INFRAMEN)",
+            "Colonia La Rábida",
+            "Centro Comercial Las Terrazas",
+            "Colonia 5 de Noviembre",
+            "Parque Centenario",
+            "Mercado Ex Cuartel"
+        ],
+        "return": null,
+        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1ggS1SnftKSu6PikQwx35n0MXae-yw2I&ehbc=2E312F' width='640' height='480'></iframe>"
     },
     {
         "code": "AB038CO",
         "routeNumber": "38-C",
         "routeName": "Residencial Valle Verde (Apopa) - Centro Judicial Isidro Menéndez y viceversa",
-        "startTime": "4:00 a.m.",
-        "endTime": "8:00 p.m.",
-        "department": "San Salvador"
+        "startTime": "4:00 AM",
+        "endTime": "8:00 PM",
+        "department": "san salvador",
+        "cost": 0.29,
+        "outbound": [
+            "Urbanización Popotlán 2",
+            "Parcelación Praderas 2",
+            "Troncal del Norte",
+            "Monumento Santa Catarina",
+            "Plaza Mundo Apopa",
+            "Redondel Apopa Autopista Este Oeste",
+            "Reparto Santa Marta",
+            "Refineria Salvadoreña de Azúcar",
+            "Cantón Calle Real",
+            "Colonia Pipil",
+            "Residencial Brisas del Bosque",
+            "Ciudad Delgado",
+            "Colonia San Joaquin Poniente",
+            "Comunidad La Isla 1",
+            "Redondel La Isla",
+            "San Judas",
+            "Plaza José Martí",
+            "Universidad Politécnica de El Salvador",
+            "Bulevar Tutunichapa",
+            "Correos de El Salvador",
+            "INDES",
+            "Parque Centenario"
+        ],
+        "return": null,
+        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1Xyl0ZryuWHcvzxo21AvyTknsMLZHLMY&ehbc=2E312F' width='640' height='480'></iframe>"
     },
     {
-        "code": "AB039XO",
-        "routeNumber": "39",
-        "routeName": "Huizucar - Mercado Central y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "7:00 p.m.",
-        "department": "San Salvador"
+        "code": "AB044X1",
+        "routeNumber": "44",
+        "routeName": "Antiguo Cuscatlán - Metrocentro - Zacamil y viceversa",
+        "startTime": "5:00 AM",
+        "endTime": "7:00 PM",
+        "department": "san salvador",
+        "cost": 0.2,
+        "outbound": [
+            "Redondel Zacamil",
+            "Hospital Policlínico Zacamil del ISSS",
+            "Universidad de El Salvador UES",
+            "Redondel El Torogoz",
+            "Hospital de Niños Benjamín Bloom",
+            "Ministerio de Hacienda",
+            "Bulevar de Los Héroes",
+            "Hotel Real InterContinental San Salvador",
+            "Metrocentro San Salvador",
+            "Metrosur",
+            "Estadio Nacional Jorge «Mágico» González",
+            "Monumento Hermano Lejano",
+            "Bulevar Los Próceres",
+            "Rotonda de Árbol de la Paz",
+            "Plaza al Soldado",
+            "Bulevar La Sultana",
+            "Fiscalía General de la República- Sultana",
+            "Parque Central de Antiguo Cuscatlán",
+            "Calle Antiguo Cuscatlán"
+        ],
+        "return": [
+            "La Ceiba de Guadalupe",
+            "Estadio Cuscatlán",
+            "Condominios Medicentro La Esperanza"
+        ],
+        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1nud7pS-xVnbaL8lK8pGNYjAAOYzeDl0&ehbc=2E312F&noprof=1' width='640' height='480'></iframe>"
     },
     {
-        "code": "AB040AO",
-        "routeNumber": "40-A",
-        "routeName": "Fenadesal - Santa Tecla - Brisas y viceversa",
-        "startTime": "4:00 a.m.",
-        "endTime": "7:30 p.m.",
-        "department": "La Libertad"
+        "code": "AB044X2",
+        "routeNumber": "44 microbus",
+        "routeName": "Antiguo Cuscatlán - Zacamil y viceversa",
+        "startTime": "5:00 AM",
+        "endTime": "7:00 PM",
+        "department": "san salvador",
+        "cost": 0.25,
+        "outbound": [
+            "Redondel Santísima Trinidad",
+            "Ayutuxtepeque",
+            "Hospital Policlínico Zacamil del ISSS",
+            "Universidad de El Salvador UES",
+            "Redondel El Torogoz",
+            "Hospital de Niños Benjamín Bloom",
+            "Ministerio de Hacienda",
+            "Bulevar de Los Héroes",
+            "Hotel Real InterContinental San Salvador",
+            "Metrocentro San Salvador",
+            "Metrosur",
+            "Estadio Nacional Jorge «Mágico» González",
+            "Monumento Hermano Lejano",
+            "Bulevar Los Próceres",
+            "Rotonda de Árbol de la Paz",
+            "Plaza al Soldado",
+            "Bulevar La Sultana",
+            "Fiscalía General de la República- Sultana",
+            "Parque Central de Antiguo Cuscatlán",
+            "Calle Antiguo Cuscatlán",
+            "Centro Comercial Las Cascadas",
+            "La Gran Vía",
+            "Chivo Pets",
+            "Canal 12",
+            "Bulevar Santa Elena",
+            "Plaza Santa Elena",
+            "Plaza Madero",
+            "FUSADES",
+            "La Prensa Gráfica",
+            "Embajada de Los Estados Unidos de América",
+            "Redondel Orden de Malta",
+            "Plaza Malta",
+            "Bulevar Orden de Malta",
+            "Rotonda El Soldado",
+            "Plaza Luis Poma"
+        ],
+        "return": [
+            "La Ceiba de Guadalupe",
+            "Estadio Cuscatlán",
+            "Condominios Medicentro La Esperanza"
+        ],
+        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1vH91nuaXK2lIHTCEyUDusEMHFjvxGaw&ehbc=2E312F' width='640' height='480'></iframe>"
     },
     {
-        "code": "AB040CO",
-        "routeNumber": "40-C",
-        "routeName": "Fenadesal - Mascota - Plaza Merliot y viceversa",
-        "startTime": "4:00 a.m.",
-        "endTime": "7:00 p.m.",
-        "department": "La Libertad"
+        "code": "AB101A1",
+        "routeNumber": "101-A",
+        "routeName": "Colonia Las Delicias (Santa Tecla) - 5 Calle Poniente y 11 Avenida Norte (San Salvador) y viceversa",
+        "startTime": "5:00 AM",
+        "endTime": "8:00 PM",
+        "department": "san salvador",
+        "cost": 0.2,
+        "outbound": [
+            "Estadio Nacional Las Delicias",
+            "Condominio Los Girasoles",
+            "Carretera Panamericana",
+            "Hospital Nacional San Rafael",
+            "El Trébol",
+            "Universidad Dr. José Matías Delgado | Campus 1",
+            "Telecorporación Salvadoreña TCS",
+            "Canal 12",
+            "Chivo Pets",
+            "La Ceiba de Guadalupe",
+            "Plaza del Soldado",
+            "Hospital Nacional El Salvador",
+            "Mercado Nacional de Artesanías",
+            "Alameda Manuel Enrique Araujo",
+            "Centro Comercial La Mascota",
+            "Monumento al Divino Salvador del Mundo",
+            "Alameda Franklin Delano Roosevelt",
+            "Parque Cuscatlán",
+            "Hospital Nacional Rosales",
+            "Parque Simón Bolívar",
+            "Centro Cívico Cultural Legislativo"
+        ],
+        "return": [
+            "Ministerio de Salud de El Salvador",
+            "Museo Universitario de Antropología",
+            "Multiplaza",
+            "Centro Comercial Las Cascadas",
+            "La Gran Vía",
+            "Parque San Martín",
+            "Parque Daniel Hernández"
+        ],
+        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1YrHJRZJPkGGfR5Rc-JQ6v4LlOBAlPCA&ehbc=2E312F' width='640' height='480'></iframe>"
     },
     {
-        "code": "AB040DO",
-        "routeNumber": "40-D",
-        "routeName": "Fenadesal - Vía Shell - Zaragoza y viceversa",
-        "startTime": "4:00 a.m.",
-        "endTime": "7:30 p.m.",
-        "department": "La Libertad"
+        "code": "AB101A2",
+        "routeNumber": "101-A vía Shell",
+        "routeName": "Col. Las Delicias - Santa Tecla - San Salvador y viceversa (Vía Shell)",
+        "startTime": "5 AM",
+        "endTime": "8 PM",
+        "department": "san salvador",
+        "cost": 0.2,
+        "outbound": [
+            "Estadio Nacional Las Delicias",
+            "Condominio Los Girasoles",
+            "Carretera Panamericana",
+            "Rotonda Vía Madrid",
+            "Bulevar Sur",
+            "Redondel Utila",
+            "Carretera Puerto de La Libertad",
+            "Universidad Dr. José Matías Delgado | Campus 1",
+            "Telecorporación Salvadoreña TCS",
+            "Canal 12",
+            "Chivo Pets",
+            "La Ceiba de Guadalupe",
+            "Plaza del Soldado",
+            "Hospital Nacional El Salvador",
+            "Mercado Nacional de Artesanías",
+            "Alameda Manuel Enrique Araujo",
+            "Centro Comercial La Mascota",
+            "Monumento al Divino Salvador del Mundo",
+            "Alameda Franklin Delano Roosevelt",
+            "Parque Cuscatlán",
+            "Hospital Nacional Rosales",
+            "Hospital General del ISSS",
+            "Centro Judicial Isidro Menéndez",
+            "Bulevar Tutunichapa",
+            "Universidad Politécnica de El Salvador",
+            "Redondel José Martí"
+        ],
+        "return": [
+            "Instituto Salvadoreño de Pensiones",
+            "Hospital Pro Familia",
+            "Rotonda Plaza México",
+            "Multiplaza",
+            "Centro Comercial Las Cascadas",
+            "La Gran Vía",
+            "Parque San Martín",
+            "Parque Daniel Hernández"
+        ],
+        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1h9d61G0oGFRbUZWQLMqiD42nNBvd7OI&ehbc=2E312F' width='640' height='480'></iframe>"
     },
     {
-        "code": "AB041LAO",
-        "routeNumber": "41-A",
-        "routeName": "Col. San José - Soyapango - 1a C. Pte, Av. Nte. JP II (S.S.) y viceversa",
-        "startTime": "4:30 a.m.",
-        "endTime": "8:48 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB041BO",
-        "routeNumber": "41-B",
-        "routeName": "Urb. Bosques del Río - Urb. El Limón (Soyapango) - 1a C. Pte y 98 Av. Nte. - JP II y viceversa",
-        "startTime": "4:25 a.m.",
-        "endTime": "9:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB041CO",
-        "routeNumber": "41-C",
-        "routeName": "Col. Santa Eduviges (Soyapango) - 13 C. Pte y 93 Av. Nte. - Po II (S.S.) y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "8:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB041DO",
-        "routeNumber": "41-D",
-        "routeName": "Reparto Las Margaritas - Prados de Venecia o Calle Pte y 90 Av. Nte. - JP II (S.S.) y viceversa",
-        "startTime": "4:20 a.m.",
-        "endTime": "9:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB041DOE",
-        "routeNumber": "41-DOE",
-        "routeName": "Reparto Las Margaritas - Prados de Venecia I o Calle Poniente y 90 Av. Norte (San Salvador) y viceversa",
-        "startTime": "4:20 a.m.",
-        "endTime": "9:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB041D1",
-        "routeNumber": "41-D1",
-        "routeName": "Urbanización La Campanera - Soyapango - 13 C. Pte y 9a Av. Nte. JP II (S.S.) y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "9:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB041EO",
-        "routeNumber": "41-E",
-        "routeName": "C. Ciudadela Don Bosco (Cton. El Algodón - Soyapango) - Av. Nte. - JP II (S.S.) y viceversa",
-        "startTime": "4:50 a.m.",
-        "endTime": "8:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB042AO",
-        "routeNumber": "42-A",
-        "routeName": "Col. Santa Teresa - Ciudad Merliot - Altos del Boulevard, San Salvador y viceversa",
-        "startTime": "4:10 a.m.",
-        "endTime": "8:00 p.m.",
-        "department": "San Salvador"
+        "code": "AB101B2",
+        "routeNumber": "101-B MB",
+        "routeName": "Alpes Suizos - Col. Quezaltepec - San Salvador y viceversa",
+        "startTime": "5 AM",
+        "endTime": "8 PM",
+        "department": "san salvador",
+        "cost": 0.31,
+        "outbound": [
+            "Parque Las Araucarias",
+            "Colonia Quezaltepeque",
+            "Centro Interactivo para el Aprendizaje de Ciencias – sede La Libertad",
+            "Plaza Tegucigalpa",
+            "La Skina",
+            "Mercado Dueñas",
+            "Gimnasio Municipal Adolfo Pineda",
+            "Carretera Panamericana",
+            "Hospital Nacional San Rafael",
+            "Viceministerio de Transporte",
+            "Universidad Dr. José Matías Delgado | Campus 1",
+            "Telecorporación Salvadoreña TCS",
+            "Canal 12",
+            "Chivo Pets",
+            "La Ceiba de Guadalupe",
+            "Plaza del Soldado",
+            "Hospital Nacional El Salvador",
+            "Mercado Nacional de Artesanías",
+            "Alameda Manuel Enrique Araujo",
+            "Centro Comercial La Mascota",
+            "Monumento al Divino Salvador del Mundo",
+            "Alameda Franklin Delano Roosevelt",
+            "Parque Cuscatlán",
+            "Hospital Nacional Rosales"
+        ],
+        "return": [
+            "Multiplaza",
+            "Centro Comercial Las Cascadas",
+            "La Gran Vía",
+            "Parque San Martín"
+        ],
+        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1nfy3kiDwLRqw4dNx3VSDrwCh80cSwMk&ehbc=2E312F' width='640' height='480'></iframe>"
     },
     {
         "code": "AB042BO",
         "routeNumber": "42-B",
         "routeName": "Col. Santa Mónica - Ciudad Merliot - 12 Av. Sur - San Salvador y viceversa",
-        "startTime": "5:10 a.m.",
-        "endTime": "7:30 p.m.",
-        "department": "San Salvador"
+        "startTime": "5:10 AM",
+        "endTime": "7:30 PM",
+        "department": "san salvador",
+        "cost": 0.31,
+        "outbound": [
+            "Residencial San Antonio",
+            "Parque Ecológico San José",
+            "Ministerio de Agricultura y Ganadería",
+            "Parque San Martín",
+            "Rotonda Vía Madrid",
+            "Bulevar Sur",
+            "Redondel Utila",
+            "Carretera Puerto de La Libertad",
+            "Carretera Panamericana",
+            "Universidad Dr. José Matías Delgado | Campus 1",
+            "Telecorporación Salvadoreña (TCS)",
+            "Canal 12",
+            "Plaza Brasilia",
+            "La Ceiba de Guadalupe",
+            "Plaza del Soldado",
+            "Hospital Nacional El Salvador",
+            "Mercado Nacional de Artesanías",
+            "Ministerio de Obras Públicas y de Transporte",
+            "Centro Comercial La Mascota",
+            "Monumento al Divino Salvador del Mundo",
+            "Alameda Franklin Delano Roosevelt",
+            "Parque Cuscatlán",
+            "Hospital Nacional Rosales",
+            "Museo Universitario de Antropología",
+            "Centro Cívico Cultural Legislativo"
+        ],
+        "return": [
+            "Mercado Ex Cuartel",
+            "Plaza Morazán",
+            "Parque Simón Bolívar",
+            "Urbanización Jardines de Cuscatlán",
+            "Redondel El Platillo"
+        ],
+        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1WYvlsP32HWAi_ocxtWq3tJ4SEi0VE7I&ehbc=2E312F' width='640' height='480'></iframe>"
     },
     {
-        "code": "AB042CO",
-        "routeNumber": "42-C",
-        "routeName": "Jardines de la Sabana (Santa Tecla) - 14a Av. Ote. - C. Ote (S.S.) y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "8:20 p.m.",
-        "department": "La Libertad"
-    },
-    {
-        "code": "AB043XO",
-        "routeNumber": "43",
-        "routeName": "Ciudadela Don Bosco (Cton. El Algodón) - 1a C. Pte. y 98 Av. Nte. (S.S.) y viceversa",
-        "startTime": "5:30 a.m.",
-        "endTime": "8:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB044X1",
-        "routeNumber": "44-1",
-        "routeName": "Antiguo Cuscatlán - Metrocentro - Zacamil y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "7:00 p.m.",
-        "department": "La Libertad"
-    },
-    {
-        "code": "AB044XIE",
-        "routeNumber": "44-1E",
-        "routeName": "Antiguo Cuscatlán - Metrocentro - Zacamil y viceversa (Servicio Exclusivo)",
-        "startTime": "5:00 a.m.",
-        "endTime": "7:30 p.m.",
-        "department": "La Libertad"
-    },
-    {
-        "code": "AB044X2",
-        "routeNumber": "44-2",
-        "routeName": "Antiguo Cuscatlán - Zacamil y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "7:00 p.m.",
-        "department": "La Libertad"
-    },
-    {
-        "code": "AB046X1",
-        "routeNumber": "46",
-        "routeName": "San Ramón (Mejicanos) - 3a C. Ote y 8a Av. Nte (S.S.) y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "8:30 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB046X2",
-        "routeNumber": "46",
-        "routeName": "San Ramón (Mejicanos) - 13a Av. Binte y 10a C. Pte (S.S.) y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "8:30 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB047XO",
-        "routeNumber": "47",
-        "routeName": "Col. Esmeralda - Mercado Central y viceversa",
-        "startTime": "5:12 a.m.",
-        "endTime": "7:48 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB048XO",
-        "routeNumber": "48-A",
-        "routeName": "Col. Santa Marta - Mercado Central y viceversa",
-        "startTime": "5:30 a.m.",
-        "endTime": "8:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB049AO",
-        "routeNumber": "49-A",
-        "routeName": "Col. La Campanera - Cantón El Limón - Soyapango y viceversa",
-        "startTime": "4:30 a.m.",
-        "endTime": "9:11 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB049BO",
-        "routeNumber": "49-B",
-        "routeName": "Cton. El Rosario - Rto. San Ramón - Cton. El Limón - Urb. La Campanera - Soyapango y viceversa",
-        "startTime": "6:00 a.m.",
-        "endTime": "p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB052X1",
-        "routeNumber": "52-1",
-        "routeName": "Calle Fenadesal (San Salvador) - Redondel Masferrer (San Salvador) y viceversa (Hotel)",
-        "startTime": "5:00 a.m.",
-        "endTime": "8:20 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB052XIE",
-        "routeNumber": "52-1E",
-        "routeName": "Calle Fenadesal (San Salvador) - Redondel Masferrer (San Salvador) y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "8:20 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB052X2",
-        "routeNumber": "52-2",
-        "routeName": "Calle Fenadesal (San Salvador) - Redondel Masferrer (San Salvador) y viceversa (Paseo)",
-        "startTime": "5:00 a.m.",
-        "endTime": "8:20 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB052X2E",
-        "routeNumber": "52-X2E",
-        "routeName": "Calle Fenadesal (San Salvador) - Redondel Masferrer (San Salvador) y viceversa (Paseo)",
-        "startTime": "5:00 a.m.",
-        "endTime": "8:20 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB059XOSS",
-        "routeNumber": "59",
-        "routeName": "Cantón Casa de Piedra - Desvío de Carretera a Panchimalco - Kilómetro 8 1/2 y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "7:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB097XO",
-        "routeNumber": "97",
-        "routeName": "Residencial Europa - Ciudad Merliot - Santa Tecla y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "8:00 p.m.",
-        "department": "La Libertad"
-    },
-    {
-        "code": "ABIOLAI",
-        "routeNumber": "101-A",
-        "routeName": "Colonia Las Delicias (Santa Tecla) - 5 Calle Poniente y 11 Avenida Norte (San Salvador) y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "8:00 p.m.",
-        "department": "La Libertad"
-    },
-    {
-        "code": "ABIOLA2",
-        "routeNumber": "101-A",
-        "routeName": "Col. Las Delicias - Santa Tecla - San Salvador y viceversa (Vía Shell)",
-        "startTime": "5:00 a.m.",
-        "endTime": "8:00 p.m.",
-        "department": "La Libertad"
-    },
-    {
-        "code": "ABIOLA2E",
-        "routeNumber": "101-AE",
-        "routeName": "Col. Las Delicias - Santa Tecla - San Salvador y viceversa (Vía Shell) (Servicio Exclusivo)",
-        "startTime": "5:00 a.m.",
-        "endTime": "8:00 p.m.",
-        "department": "La Libertad"
-    },
-    {
-        "code": "ABIOIBI",
-        "routeNumber": "101-B",
-        "routeName": "Col. Quezaltepec - Santa Tecla - San Salvador y viceversa",
-        "startTime": "4:50 a.m.",
-        "endTime": "8:00 p.m.",
-        "department": "La Libertad"
-    },
-    {
-        "code": "AB101B2",
-        "routeNumber": "101-B",
-        "routeName": "Alpes Suizos - Col. Quezaltepec - San Salvador y viceversa",
-        "startTime": "4:30 a.m.",
-        "endTime": "8:00 p.m.",
-        "department": "La Libertad"
-    },
-    {
-        "code": "ABIOICO",
-        "routeNumber": "101-C",
-        "routeName": "Hacienda San José - Santa Tecla - Antiguo Cuscatlán - San Salvador y viceversa",
-        "startTime": "5:10 a.m.",
-        "endTime": "7:00 p.m.",
-        "department": "La Libertad"
-    },
-    {
-        "code": "ABIOIDO",
+        "code": "AB101DO",
         "routeNumber": "101-D",
         "routeName": "Residencial San Antonio - Santa Tecla - San Salvador y viceversa",
-        "startTime": "4:15 a.m.",
-        "endTime": "9:00 p.m.",
-        "department": "La Libertad"
-    },
-    {
-        "code": "ABIOLXISS",
-        "routeNumber": "101-XI",
-        "routeName": "Alpes Suizos - Colonia Quezaltepec - San Salvador y viceversa (Servicio Exclusivo)",
-        "startTime": "4:30 a.m.",
-        "endTime": "8:00 p.m.",
-        "department": "La Libertad"
-    },
-    {
-        "code": "AB109XISS",
-        "routeNumber": "109",
-        "routeName": "Nejapa - Apopa - San Salvador y viceversa",
-        "startTime": "4:40 a.m.",
-        "endTime": "7:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB115XO",
-        "routeNumber": "115",
-        "routeName": "Tonacatepeque - Distrito Italia - Apopa - San Salvador y viceversa",
-        "startTime": "4:45 a.m.",
-        "endTime": "6:30 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB117AOSS",
-        "routeNumber": "117-A",
-        "routeName": "Hacienda San Carlos - Aguilares - San Salvador y viceversa",
-        "startTime": "5:00 a.m.",
-        "endTime": "6:45 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB117COSS",
-        "routeNumber": "117-C",
-        "routeName": "Cantón Tutultepeque - Aguilares y viceversa",
-        "startTime": "5:05 a.m.",
-        "endTime": "5:25 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB117XOSS",
-        "routeNumber": "117",
-        "routeName": "El Paisnal - Aguilares - San Salvador y viceversa",
-        "startTime": "3:55 a.m.",
-        "endTime": "8:10 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB140X7",
-        "routeNumber": "140-7",
-        "routeName": "San Martín - Carretera de Schafik Handal (Mejicanos) y viceversa",
-        "startTime": "3:50 a.m.",
-        "endTime": "9:30 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB173XO",
-        "routeNumber": "173",
-        "routeName": "Nejapa - San Salvador y viceversa",
-        "startTime": "4:00 a.m.",
-        "endTime": "6:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB190AOSS",
-        "routeNumber": "190-A",
-        "routeName": "San Martín - Carretera Panamericana - Cantón San Agustín y viceversa",
-        "startTime": "5:30 a.m.",
-        "endTime": "6:30 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "AB190XO",
-        "routeNumber": "190",
-        "routeName": "Tonacatepeque - San Martín y viceversa",
-        "startTime": "4:00 a.m.",
-        "endTime": "7:00 p.m.",
-        "department": "San Salvador"
-    },
-    {
-        "code": "ABALI-S",
-        "routeNumber": "ALI-S",
-        "routeName": "Colonia Bosques del Río - Monte Blanco - Soyapango - Terminal SITRAMSS y viceversa",
-        "startTime": "4:25 a.m.",
-        "endTime": "9:00 p.m.",
-        "department": "San Salvador"
+        "startTime": "4:15 AM",
+        "endTime": "9:00 PM",
+        "department": "san salvador",
+        "cost": 0.2,
+        "outbound": [
+            "Residencial San Antonio",
+            "Parque Ecológico San José",
+            "Parque Adela Van Severen De Contreras",
+            "Urbanización San Antonio Las Palmeras",
+            "Colegio Salesiano Santa Cecilia",
+            "Plaza de La Cultura",
+            "Parque San Martín",
+            "Parque deportivo El Cafetalón",
+            "Calle Chiltiupán",
+            "Plaza Merliot",
+            "Redondel El Platillo",
+            "Calle El Pedregal",
+            "La Gran Vía",
+            "Centro Comercial Las Cascadas",
+            "Multiplaza",
+            "Redondel Mayor Roberto D’Aubuisson",
+            "Redondel de Las Naciones Unidas",
+            "Parque del Bicentenario",
+            "Calle La Mascota",
+            "Alianza Francesa de San Salvador",
+            "Plaza Chile",
+            "Fuentes Beethoven",
+            "Alameda Juan Pablo II",
+            "Plaza Baden Powell",
+            "La Despensa de Don Juan Los Héroes",
+            "Metrocentro San Salvador",
+            "Instituto Salvadoreño del Seguro Social – Oficinas Administrativas",
+            "Rotonda Plaza México",
+            "Hospital Pro Familia",
+            "Bulevar Tutunichapa",
+            "Centro Judicial Isidro Menéndez",
+            "Universidad Politécnica de El Salvador",
+            "Mercado San Miguelito",
+            "Avenida España"
+        ],
+        "return": ["Calle Los Sisimiles", "Plaza La Biblia", "Redondel Masferrer"],
+        "map": "<iframe src='https://www.google.com/maps/d/u/0/embed?mid=1Vp3XbKtptpGsquBqTVVws5Jd5YFcDJw&ehbc=2E312F' width='640' height='480'></iframe>"
     }
-
 ];
 
 
