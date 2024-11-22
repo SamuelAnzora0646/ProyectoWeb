@@ -7,26 +7,32 @@ const RouteList = ({ onRouteSelect, selectedRoute }) => {
   const [filteredRoutes, setFilteredRoutes] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedDepartment, setSelectedDepartment] = useState("");
+  const [loading, setLoading] = useState(true); // Estado de carga
+  const [error, setError] = useState(null); // Para manejar errores
 
   useEffect(() => {
+    // Cargar las rutas desde la API
     axios
-      .get("http://localhost:3000/api/routes")
+      .get("https://login-565c8-default-rtdb.firebaseio.com/.json")
       .then((response) => {
         if (Array.isArray(response.data)) {
           setRoutes(response.data);
-          setFilteredRoutes(response.data);  // Inicializamos el listado filtrado con todas las rutas
-          
+          setFilteredRoutes(response.data); // Inicializamos el listado filtrado con todas las rutas
+          setLoading(false); // Detenemos el estado de carga
+
           // Seleccionamos una ruta por defecto (por ejemplo, la primera de la lista)
           if (response.data.length > 0) {
-            const defaultRoute = response.data[0];  // Ruta por defecto (la primera)
-            onRouteSelect(defaultRoute);  // Llamamos a la función para marcarla como seleccionada
+            const defaultRoute = response.data[0]; // Ruta por defecto (la primera)
+            onRouteSelect(defaultRoute); // Llamamos a la función para marcarla como seleccionada
           }
         } else {
-          console.error("La respuesta de la API no es un arreglo de rutas.");
+          setError("La respuesta de la API no es un arreglo de rutas.");
+          setLoading(false);
         }
       })
       .catch((error) => {
-        console.error("Error al obtener las rutas:", error);
+        setError("Error al obtener las rutas: " + error.message);
+        setLoading(false);
       });
   }, []); // Solo se ejecuta una vez al cargar la página
 
@@ -35,47 +41,53 @@ const RouteList = ({ onRouteSelect, selectedRoute }) => {
     return selectedRoute?.routeNumber === route.routeNumber;
   };
 
-  // Filtrar rutas según el departamento seleccionado
-  const handleDepartmentChange = (e) => {
-    const department = e.target.value;
-    setSelectedDepartment(department);
+  // Centralizar la lógica de filtrado de rutas
+  const filterRoutes = () => {
+    let filtered = routes;
 
-    // Filtrar las rutas por departamento
-    const filteredByDepartment = routes.filter(
-      (route) => !department || route.department.toLowerCase() === department.toLowerCase()
-    );
-    
-    // Filtrar también por el término de búsqueda
-    filterRoutes(filteredByDepartment);
-  };
-
-  // Función para manejar la búsqueda
-  const handleSearchChange = (e) => {
-    const search = e.target.value;  // No recortamos los espacios ahora
-    setSearchTerm(search);
-
-    // Filtrar rutas por el término de búsqueda, ignorando los espacios adicionales
-    const filteredRoutes = routes.filter((route) =>
-      route.routeNumber.toLowerCase().includes(search.toLowerCase()) ||
-      route.routeName.toLowerCase().includes(search.toLowerCase())
-    );
-
-    // Aplicar también el filtro por departamento si está seleccionado
-    if (selectedDepartment) {
-      setFilteredRoutes(filteredRoutes.filter((route) => route.department.toLowerCase() === selectedDepartment.toLowerCase()));
-    } else {
-      setFilteredRoutes(filteredRoutes);
+    // Filtrar por término de búsqueda, permitiendo los espacios
+    if (searchTerm.trim()) {  // Solo filtrar si hay texto no vacío
+      const searchTermLower = searchTerm.toLowerCase().trim();  // Recortamos el término de búsqueda
+      filtered = filtered.filter((route) =>
+        route.routeNumber?.toLowerCase().includes(searchTermLower) ||
+        route.routeName?.toLowerCase().includes(searchTermLower)
+      );
     }
+
+    // Filtrar por departamento
+    if (selectedDepartment) {
+      filtered = filtered.filter(
+        (route) => route.department?.toLowerCase() === selectedDepartment.toLowerCase()
+      );
+    }
+
+    setFilteredRoutes(filtered);
   };
 
-  // Función central para filtrar rutas por el término de búsqueda
-  const filterRoutes = (routesToFilter) => {
-    const filteredRoutes = routesToFilter.filter((route) =>
-      route.routeNumber.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      route.routeName.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    setFilteredRoutes(filteredRoutes);
+  // Llamar a la función de filtro cada vez que el término de búsqueda o el departamento cambian
+  useEffect(() => {
+    if (routes.length > 0) {
+      filterRoutes();
+    }
+  }, [searchTerm, selectedDepartment, routes]); // Dependencias: se ejecuta cada vez que cambian estos valores
+
+  // Función para manejar el cambio de búsqueda
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value); // Actualiza el término de búsqueda
   };
+
+  // Función para manejar el cambio de departamento
+  const handleDepartmentChange = (e) => {
+    setSelectedDepartment(e.target.value); // Actualiza el departamento seleccionado
+  };
+
+  if (loading) {
+    return <div>Cargando rutas...</div>; // Estado de carga
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>; // Mensaje de error
+  }
 
   return (
     <div className="route-list p-2 rounded" style={{ maxHeight: "500px", overflowY: "auto" }}>
@@ -116,8 +128,8 @@ const RouteList = ({ onRouteSelect, selectedRoute }) => {
           <RouteItem
             key={index}
             route={route}
-            onSelect={onRouteSelect}  // Función que actualiza el estado de la ruta seleccionada
-            isSelected={isRouteSelected(route)}  // Pasamos si la ruta está seleccionada
+            onSelect={onRouteSelect} // Función que actualiza el estado de la ruta seleccionada
+            isSelected={isRouteSelected(route)} // Pasamos si la ruta está seleccionada
           />
         ))
       ) : (
