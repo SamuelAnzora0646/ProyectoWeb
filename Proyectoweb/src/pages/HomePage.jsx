@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom'; // Importar el hook de navegación
+import { AuthContext } from '../context/AuthContext'; // Asegúrate de que la ruta sea correcta
 import logo from '../assets/logo.jpg'; // Importación de la imagen
 
 const HomePage = () => {
+  const { user } = useContext(AuthContext); // Obtener el usuario desde el contexto de autenticación
   const navigate = useNavigate(); // Hook para manejar la navegación
 
-  // Función para manejar el clic en el botón
+  // Función para manejar el clic en el botón de registro
   const handleRegisterClick = () => {
-    navigate('/login'); // Cambiar la ruta a "/login"
+    if (user) {
+      // Si el usuario está autenticado, lo redirigimos al perfil
+      navigate('/perfil');
+    } else {
+      // Si el usuario no está autenticado, lo redirigimos a la página de login
+      navigate('/login');
+    }
   };
 
   return (
